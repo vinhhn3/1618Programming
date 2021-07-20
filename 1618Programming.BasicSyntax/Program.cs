@@ -296,11 +296,11 @@ namespace GCD0904.BasicSyntax
 
 			Console.WriteLine(ticketPrice);
 
-			FOR loops
-			 for (int i = initValue; i < endedValue; i++)
-			{
-				doSomething();
-			}
+			// FOR loops
+			// for (int i = initValue; i < endedValue; i++)
+			// {
+			//	doSomething();
+			// }
 			int i;
 
 			for (i = 1; i < 10; i = i + 1)
