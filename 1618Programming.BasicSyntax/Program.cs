@@ -27,6 +27,22 @@ namespace GCD0904.BasicSyntax
 			Console.WriteLine("Welcome: {0}, your age is: {1}", fullName, age);
 			Console.WriteLine($"Welcome {fullName}, your age is: {age}");
 
+			// Formatting numbers with placeholders
+			double salary = 123.45678;
+			Console.WriteLine(salary);
+			Console.WriteLine("{0:F2}", salary);
+			Console.WriteLine("{0:F3}", salary);
+			Console.WriteLine("{0:F4}", salary);
+
+			// Student Information solution
+			Console.WriteLine("Enter student information below");
+			string studentName = Console.ReadLine();
+			int studentAge = int.Parse(Console.ReadLine());
+			double averageGrade = double.Parse(Console.ReadLine());
+			Console.WriteLine("Student Information");
+			Console.WriteLine($"Name: {studentName}, Age: {studentAge}, Grade: {averageGrade}");
+
+
 			Console.ReadLine();
 		}
 	}
