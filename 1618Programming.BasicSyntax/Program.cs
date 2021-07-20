@@ -143,6 +143,158 @@ namespace GCD0904.BasicSyntax
 
 			Console.WriteLine($"Hour: {hour}, Minutes: {minutes}");
 
+			Console.WriteLine("====Switch case statement====");
+
+			// switch-case statement
+			// switch (variable)
+			// {
+			//	 case value_1:
+			//		 doSomething();
+			//		 break;
+
+			//	 case value_2:
+			//		 doSomething();
+			//		 break;
+
+			//	 default:
+			//		 break;
+			// }
+
+			int month = int.Parse(Console.ReadLine());
+
+			switch (month)
+			{
+				case 1:
+					Console.WriteLine("Jan");
+					break;
+				case 2:
+					Console.WriteLine("Feb");
+					break;
+				case 3:
+					Console.WriteLine("Mar");
+					break;
+				case 4:
+					Console.WriteLine("Apr");
+					break;
+				case 5:
+					Console.WriteLine("May");
+					break;
+				case 6:
+					Console.WriteLine("June");
+					break;
+				case 7:
+					Console.WriteLine("July");
+					break;
+				case 8:
+					Console.WriteLine("Aug");
+					break;
+				case 9:
+					Console.WriteLine("Sep");
+					break;
+				case 10:
+					Console.WriteLine("Oct");
+					break;
+				case 11:
+					Console.WriteLine("Nov");
+					break;
+				case 12:
+					Console.WriteLine("Dec");
+					break;
+				default:
+					Console.WriteLine("INVALID INPUT !!!");
+					break;
+			}
+
+			// Logical Operators
+			// NOT: !
+			// AND: &&
+			// OR: ||
+			// ======
+			// Logical value: True, False
+			// ======
+			// NOT: 
+			// !True => False
+			// !False => True
+			// AND: True when everything is true, else False
+			// True && True => True
+			// True && False => False
+			// False && True => False
+			// False && False => False
+			// OR: False when everthing is false, else True
+			// True || True => True
+			// True || False => True
+			// False || True => True
+			// False || False => False
+
+			bool gateA = true;
+			Console.WriteLine(!gateA);    // NOT(true) => False
+
+			bool gateB = false;
+
+			Console.WriteLine(gateA && gateB);  // true AND false => false
+			Console.WriteLine(gateA && gateA);  // true AND true => true
+
+			Console.WriteLine(gateA || gateB);  // true OR false => true
+			Console.WriteLine(gateB || gateB);  // false OR false => false
+
+			// Theatre Promotions
+			string datetype = Console.ReadLine();
+			int customerAge = int.Parse(Console.ReadLine());
+			int ticketPrice = 0;
+
+			switch (datetype)
+			{
+				case "Weekday":
+					if (customerAge >= 0 && customerAge <= 18)
+					{
+						ticketPrice = 12;
+					}
+					else if (customerAge > 18 && customerAge <= 64)
+					{
+						ticketPrice = 18;
+					}
+					else if (customerAge < 64 && customerAge <= 122)
+					{
+						ticketPrice = 12;
+					}
+					break;
+
+				case "Weekend":
+					if (customerAge >= 0 && customerAge <= 18)
+					{
+						ticketPrice = 15;
+					}
+					else if (customerAge > 18 && customerAge <= 64)
+					{
+						ticketPrice = 20;
+					}
+					else if (customerAge < 64 && customerAge <= 122)
+					{
+						ticketPrice = 15;
+					}
+					break;
+
+				case "Holiday":
+					if (customerAge >= 0 && customerAge <= 18)
+					{
+						ticketPrice = 5;
+					}
+					else if (customerAge > 18 && customerAge <= 64)
+					{
+						ticketPrice = 12;
+					}
+					else if (customerAge < 64 && customerAge <= 122)
+					{
+						ticketPrice = 10;
+					}
+					break;
+				default:
+					ticketPrice = -1;
+					Console.WriteLine("Error !!!");
+					break;
+			}
+
+			Console.WriteLine(ticketPrice);
 
 			Console.ReadLine();
 		}
