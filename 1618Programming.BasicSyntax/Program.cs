@@ -58,10 +58,10 @@ namespace GCD0904.BasicSyntax
 
 			// If statements
 
-			//if (condition)
-			//{
-			//	doSomething();	
-			//}
+			// if (condition)
+			// {
+			//	 doSomething();	
+			// }
 
 			Console.WriteLine("=====IF STATEMENTS=====");
 
@@ -77,18 +77,18 @@ namespace GCD0904.BasicSyntax
 			}
 
 			Console.WriteLine("=====if ...else if ... else STATEMENTS=====");
-			//if (condition_1)
-			//{
-			//	doSomething();
-			//}
-			//else if (condition_2)
-			//{
-			//	doSomethingMore();
-			//}
-			//else
-			//{
-			//	doSomething();
-			//}
+			// if (condition_1)
+			// {
+			//	 doSomething();
+			// }
+			// else if (condition_2)
+			// {
+			//	 doSomethingMore();
+			// }
+			// else
+			// {
+			//	 doSomething();
+			// }
 
 			// Ctrl + k + c => comment
 			// Ctrl + k + u => uncomment
@@ -119,6 +119,29 @@ namespace GCD0904.BasicSyntax
 			{
 				Console.WriteLine("ERROR !!!");
 			}
+
+			// Back in 30 minutes
+			int hour = int.Parse(Console.ReadLine());
+			int minutes = int.Parse(Console.ReadLine());
+
+			// minutes: 46 + 30 = 76 - 60 = 16
+			// hour: 1 + 1 = 2
+
+			// minutes: 20 + 30 = 50
+			// hour: 1
+			minutes = minutes + 30;
+			if (minutes >= 60)
+			{
+				minutes = minutes - 60;
+				hour = hour + 1;
+			}
+
+			if (hour == 24)
+			{
+				hour = 0;
+			}
+
+			Console.WriteLine($"Hour: {hour}, Minutes: {minutes}");
 
 
 			Console.ReadLine();
