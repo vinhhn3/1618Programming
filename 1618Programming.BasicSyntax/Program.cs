@@ -42,6 +42,84 @@ namespace GCD0904.BasicSyntax
 			Console.WriteLine("Student Information");
 			Console.WriteLine($"Name: {studentName}, Age: {studentAge}, Grade: {averageGrade}");
 
+			// Comparison Operators
+			// > < <= >= == != 
+			Console.WriteLine("=====Comparison Operators=====");
+
+			int numberA = 10;
+			int numberB = 20;
+
+			Console.WriteLine(numberA < numberB);   // true
+			Console.WriteLine(numberA > numberB);   // false
+			Console.WriteLine(numberA <= numberB);  // true
+			Console.WriteLine(numberA >= numberB);  // false
+			Console.WriteLine(numberA == numberB);  // false
+			Console.WriteLine(numberA != numberB);  // true
+
+			// If statements
+
+			//if (condition)
+			//{
+			//	doSomething();	
+			//}
+
+			Console.WriteLine("=====IF STATEMENTS=====");
+
+			double grade = 6.5;
+			if (grade < 6.5)
+			{
+				Console.WriteLine("Failed !!!");
+			}
+
+			if (grade >= 6.5)
+			{
+				Console.WriteLine("Passed !!!");
+			}
+
+			Console.WriteLine("=====if ...else if ... else STATEMENTS=====");
+			//if (condition_1)
+			//{
+			//	doSomething();
+			//}
+			//else if (condition_2)
+			//{
+			//	doSomethingMore();
+			//}
+			//else
+			//{
+			//	doSomething();
+			//}
+
+			// Ctrl + k + c => comment
+			// Ctrl + k + u => uncomment
+			Console.Write("Enter your grade: ");
+			grade = double.Parse(Console.ReadLine());
+
+			if (grade < 0)
+			{
+				Console.WriteLine("ERROR !!!");
+			}
+			else if (grade < 6.5)
+			{
+				Console.WriteLine("Failed !!!");
+			}
+			else if (grade < 8)
+			{
+				Console.WriteLine("Passed !!!");
+			}
+			else if (grade < 10)
+			{
+				Console.WriteLine("Merit !!!");
+			}
+			else if (grade == 10)
+			{
+				Console.WriteLine("Distinction !!!");
+			}
+			else
+			{
+				Console.WriteLine("ERROR !!!");
+			}
+
 
 			Console.ReadLine();
 		}
