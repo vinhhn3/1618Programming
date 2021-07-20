@@ -296,6 +296,67 @@ namespace GCD0904.BasicSyntax
 
 			Console.WriteLine(ticketPrice);
 
+			FOR loops
+			 for (int i = initValue; i < endedValue; i++)
+			{
+				doSomething();
+			}
+			int i;
+
+			for (i = 1; i < 10; i = i + 1)
+			{
+
+				Console.WriteLine(i);
+			}
+			int j;
+
+			for (j = 10; j > 0; j--)
+			{
+				Console.WriteLine(j);
+			}
+
+
+			// WHILE loops
+			// while (condition)
+			// {
+			//	 doSomething();
+			// }
+
+			i = 1;
+			while (i < 10)
+			{
+				Console.WriteLine(i);
+				i = i + 1;
+			}
+
+			j = 10;
+			while (j > 0)
+			{
+				Console.WriteLine(j);
+				j = j - 1;
+			}
+
+			// Calcuate factorial of number n
+			int n = int.Parse(Console.ReadLine());
+			int result = 1;
+
+			if (n == 0)
+			{
+				result = 1;
+			}
+			else
+			{
+				int index = 0;
+
+				while (index < n)
+				{
+					result = result * (n - index);
+					index = index + 1;
+				}
+			}
+
+			Console.WriteLine($"Factorial of {n} is: {result}");
+
 			Console.ReadLine();
 		}
 	}
