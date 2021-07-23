@@ -76,14 +76,52 @@ namespace GCD0904.DataTypesAndVariables
 
 
 			// Integer Operations
-			int firstNumber = int.Parse(Console.ReadLine());
-			int secondNumber = int.Parse(Console.ReadLine());
-			int thirdNumber = int.Parse(Console.ReadLine());
-			int fourthNumber = int.Parse(Console.ReadLine());
+			//int firstNumber = int.Parse(Console.ReadLine());
+			//int secondNumber = int.Parse(Console.ReadLine());
+			//int thirdNumber = int.Parse(Console.ReadLine());
+			//int fourthNumber = int.Parse(Console.ReadLine());
 
-			int result = ((firstNumber + secondNumber) / thirdNumber) * fourthNumber;
+			//int result = ((firstNumber + secondNumber) / thirdNumber) * fourthNumber;
 
-			Console.WriteLine($"Result: {result}");
+			//Console.WriteLine($"Result: {result}");
+
+			// Real Numbers
+			float floatPI = 3.141592653589793238f;
+			double doublePI = 3.141592653589793238;
+			Console.WriteLine("Float PI is: {0}", floatPI);   // 3.141593
+			Console.WriteLine("Double PI is: {0}", doublePI); // 3.14159265358979
+
+			Console.WriteLine(0.1 + 0.2 == 0.3);  // False
+			Console.WriteLine(0.1 + 0.2 > 0.3);   // True
+																						// Read more: https://genk.vn/khi-chrome-cho-ra-ket-qua-01-02-03-ban-chat-thuc-su-cua-laptop-windows-iphone-va-nhung-co-may-tinh-toan-ban-dang-dung-hang-ngay-20200927165653803.chn
+
+			// Scientific Notation
+			double d = 10000000000000000000000000000000000.0;
+			Console.WriteLine(d); // 1E+34
+			double d2 = 20e-3;
+			Console.WriteLine(d2); // 0.02
+			double d3 = double.MaxValue;
+			Console.WriteLine(d3); // 1.79769313486232E+308
+
+			// Floating-Point Division
+			Console.WriteLine(10 / 4);    // (int / int) = int => 2
+			Console.WriteLine(10 / 4.0);  // (int / double) = double =. 2.5
+
+			Console.WriteLine(10 / 0.0);  // Infinity
+			Console.WriteLine(-10 / 0.0); // -Infinity
+
+			Console.WriteLine(0 / 0.0);   // NaN (not a number)
+			Console.WriteLine(8 % 2.5);   // (int % double) = double => 0.5 (3 * 2.5 + 0.5 = 8)
+
+			Console.WriteLine(8 * 2.5);   // (int * double) = double => 20.0
+
+			Console.WriteLine(100000000000000.0 + 0.3); // 100000000000000 (loss of precision)
+
+			double a1 = 1.0f, b1 = 0.33f, sum = 1.33;
+			Console.WriteLine("a1+b1={0} sum={1} equal={2}",
+				a1 + b1, sum, (a + b == sum));
+			// a+b=1.33000001311302 sum=1.33 equal = False
+
 			Console.ReadLine();
 		}
 	}
