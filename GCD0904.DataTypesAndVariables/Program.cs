@@ -135,9 +135,9 @@ namespace GCD0904.DataTypesAndVariables
 			int people = int.Parse(Console.ReadLine());
 			int capacity = int.Parse(Console.ReadLine());
 
-			double result = (double)people / capacity;
+			double peoplePerCourse = (double)people / capacity;
 
-			int courses = (int)Math.Ceiling(result);
+			int courses = (int)Math.Ceiling(peoplePerCourse);
 
 			Console.WriteLine($"Number of courses needed: {courses}");
 
