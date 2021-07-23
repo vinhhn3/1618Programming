@@ -122,6 +122,65 @@ namespace GCD0904.DataTypesAndVariables
 				a1 + b1, sum, (a + b == sum));
 			// a+b=1.33000001311302 sum=1.33 equal = False
 
+			// Type Conversion
+			float height = 1.76f;       // Real Number
+			double maxHeight = height;  // Real Number | Implicit Conversion
+
+			double width = 9.88378;         // Real Number - double 64 bit
+			float maxWidth = (float)width;  // Real Number - float 32 bit | Explicit Conversion
+
+			int widthInt = (int)width;           // int 32 bit, double 64 bit | Explicit Conversion
+
+			// Problem Elevator
+			int people = int.Parse(Console.ReadLine());
+			int capacity = int.Parse(Console.ReadLine());
+
+			double result = (double)people / capacity;
+
+			int courses = (int)Math.Ceiling(result);
+
+			Console.WriteLine($"Number of courses needed: {courses}");
+
+			// Centuries to minutes
+			int centeries = int.Parse(Console.ReadLine());
+
+			Console.WriteLine($"{centeries} centuries," +
+				$" {centeries * 100} years, {centeries * 100 * 365.2442} days," +
+				$"{centeries * 100 * 365.2442 * 24} hours," +
+				$"{centeries * 100 * 365.2442 * 24 * 60} minutes");
+
+			// Boolean Type
+			// Boolean value: True, False
+			int numberC = 20;
+			int numberD = 30;
+			bool isCGreaterThanD = numberC > numberD;
+			Console.WriteLine(isCGreaterThanD); // false
+			bool isDGreaterThanC = numberD > numberC;
+			Console.WriteLine(isDGreaterThanC); // true
+
+			// Special Numbers
+			int n = int.Parse(Console.ReadLine());
+			for (int num = 1; num <= n; num++)
+			{
+				int sumOfDigits = 0;
+				int digits = num;
+				while (digits > 0)
+				{
+					sumOfDigits += digits % 10;
+					digits = digits / 10;
+				}
+				if (sumOfDigits == 5 || sumOfDigits == 7 || sumOfDigits == 11)
+				{
+					Console.WriteLine($"{num}: is Special");
+				}
+				else
+				{
+					Console.WriteLine($"{num}: is NOT Special");
+				}
+				// TODO: check whether the sum is special
+			}
+
+
 			Console.ReadLine();
 		}
 	}
