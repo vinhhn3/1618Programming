@@ -76,14 +76,14 @@ namespace GCD0904.DataTypesAndVariables
 
 
 			// Integer Operations
-			//int firstNumber = int.Parse(Console.ReadLine());
-			//int secondNumber = int.Parse(Console.ReadLine());
-			//int thirdNumber = int.Parse(Console.ReadLine());
-			//int fourthNumber = int.Parse(Console.ReadLine());
+			int firstNumber = int.Parse(Console.ReadLine());
+			int secondNumber = int.Parse(Console.ReadLine());
+			int thirdNumber = int.Parse(Console.ReadLine());
+			int fourthNumber = int.Parse(Console.ReadLine());
 
-			//int result = ((firstNumber + secondNumber) / thirdNumber) * fourthNumber;
+			int result = ((firstNumber + secondNumber) / thirdNumber) * fourthNumber;
 
-			//Console.WriteLine($"Result: {result}");
+			Console.WriteLine($"Result: {result}");
 
 			// Real Numbers
 			float floatPI = 3.141592653589793238f;
@@ -177,9 +177,56 @@ namespace GCD0904.DataTypesAndVariables
 				{
 					Console.WriteLine($"{num}: is NOT Special");
 				}
-				// TODO: check whether the sum is special
 			}
 
+			// Character Data Type
+			// ASCII Table: https://www.asciitable.com/
+
+			char ch = 'a'; // character '', not ""
+			Console.WriteLine(ch);      // 'a'
+			Console.WriteLine((int)ch); // 97
+
+			int charInt = 97;
+			Console.WriteLine((char)charInt);   // a
+			charInt++;
+			Console.WriteLine(charInt);         // 98	
+			Console.WriteLine((char)charInt);   // b
+
+			char tab = '\t';
+			char endOfTheLine = '\n';
+
+			Console.WriteLine("This is a tab: " + '\t' + tab + "End of a Tab");
+			Console.WriteLine("This is end of the Line " + '\n' + endOfTheLine + "This is another Line");
+
+			Console.WriteLine('\u0110');
+			Console.WriteLine('\u004B');
+
+			// String
+			string hello = "Hello World !!!";
+			Console.WriteLine(hello);
+
+			Console.WriteLine(hello + "C# is beautiful !!!");
+
+			string path = "D:\\1618Programming";
+			path = @"D:\1618Programming";
+			string fileName = "Unit1.pdf";
+
+			string filePath = $"{path}\\{fileName}";
+			filePath = $@"{path}\{fileName}";
+			Console.WriteLine(path);
+
+			Console.WriteLine(filePath);
+
+			// Concat Names
+			string firstName = Console.ReadLine();
+			string lastName = Console.ReadLine();
+			string delimiter = Console.ReadLine();
+
+			string concatNames = $"{firstName} {delimiter} {lastName}";
+			concatNames = firstName + " " + delimiter + " " + lastName;
+
+			Console.WriteLine(concatNames);
+			Console.WriteLine("{0} {1} {2}", firstName, delimiter, lastName);
 
 			Console.ReadLine();
 		}
