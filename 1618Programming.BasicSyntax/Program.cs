@@ -315,7 +315,6 @@ namespace GCD0904.BasicSyntax
 				Console.WriteLine(j);
 			}
 
-
 			// WHILE loops
 			// while (condition)
 			// {
