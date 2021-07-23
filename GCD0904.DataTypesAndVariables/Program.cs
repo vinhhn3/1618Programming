@@ -34,10 +34,18 @@ namespace GCD0904.DataTypesAndVariables
 
 			int tuoiKhachHang = 10; // Do not use Vietnamese for naming variable
 
-			int CustomerAge = 20;
-			int Customer_Age = 20;
-			int customer_Age = 20;
-			int CUSTOMER_AGE = 20;
+			int CustomerAge = 20;   // Do not use PascalCase for local variable
+			int Customer_Age = 20;  // Do not use "_"
+			int customer_Age = 20;  // Do not use "_"
+			int CUSTOMER_AGE = 20;  // Do not use Capital Letter
+
+			// Do not naming like this
+			// Variable name must have meaning
+			int c = 20;
+
+			// For local variable, use [Noun] or [Adj] + [Noun]
+			// Use camelCase for local variable
+			string customerAddress = "12 Le Loi";
 
 			// Variable must use Noun
 			int checkExists;  // Not applicable because check verb
