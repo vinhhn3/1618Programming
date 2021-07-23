@@ -33,7 +33,6 @@ namespace GCD0904.DataTypesAndVariables
 			int iPhonePrice = 20;   // => price of iPhone
 
 			int tuoiKhachHang = 10; // Do not use Vietnamese for naming variable
-
 			int CustomerAge = 20;   // Do not use PascalCase for local variable
 			int Customer_Age = 20;  // Do not use "_"
 			int customer_Age = 20;  // Do not use "_"
@@ -47,10 +46,11 @@ namespace GCD0904.DataTypesAndVariables
 			// Use camelCase for local variable
 			string customerAddress = "12 Le Loi";
 
-			// Variable must use Noun
+
 			int checkExists;  // Not applicable because check verb
 
 			bool isAvailable = true;  // Use it instead
+																// Variable must use Noun
 
 			Console.WriteLine($"Age of customer: {customerAge}");
 			Console.WriteLine($"Price of iPhone: {iPhonePrice}");
@@ -75,7 +75,15 @@ namespace GCD0904.DataTypesAndVariables
 			// Console.WriteLine(insideIf);
 
 
+			// Integer Operations
+			int firstNumber = int.Parse(Console.ReadLine());
+			int secondNumber = int.Parse(Console.ReadLine());
+			int thirdNumber = int.Parse(Console.ReadLine());
+			int fourthNumber = int.Parse(Console.ReadLine());
 
+			int result = ((firstNumber + secondNumber) / thirdNumber) * fourthNumber;
+
+			Console.WriteLine($"Result: {result}");
 			Console.ReadLine();
 		}
 	}
