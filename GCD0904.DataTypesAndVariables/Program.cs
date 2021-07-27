@@ -46,7 +46,6 @@ namespace GCD0904.DataTypesAndVariables
 			// Use camelCase for local variable
 			string customerAddress = "12 Le Loi";
 
-
 			int checkExists;  // Not applicable because check verb
 
 			bool isAvailable = true;  // Use it instead
