@@ -132,9 +132,31 @@ namespace GCD0904ArrayAndList
 			for (int i = 0; i < numbers.Length; i++)
 			{
 				Console.Write(numbers[i] + " ");
-
 			}
 			Console.WriteLine();
+
+			// Reverse Array of Strings
+			string[] items = new string[]
+			{
+				"Hello",
+				"Bonjour",
+				"Xin Chao",
+				"Nihao",
+				"Konichiwa"
+			};
+
+			// Method 1: use Reverse()
+			string[] reverseItems = items.Reverse().ToArray();
+
+			// Method 2: use loop
+			string tempString = "";
+			for (int i = 0; i < items.Length / 2; i++)
+			{
+				tempString = items[i];
+				items[i] = items[items.Length - 1 - i];
+				items[items.Length - 1 - i] = tempString;
+			}
+
 
 			Console.ReadLine();
 		}
