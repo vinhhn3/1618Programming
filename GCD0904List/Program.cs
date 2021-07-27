@@ -49,6 +49,14 @@ namespace GCD0904List
 				// List: can use index like array to read value
 				Console.WriteLine(names[i]);
 			}
+
+			// Insert
+			names.Insert(3, "Lara Croft");
+			for (int i = 0; i < names.Count; i++)
+			{
+				// List: can use index like array to read value
+				Console.WriteLine(names[i]);
+			}
 			Console.ReadLine();
 		}
 	}
