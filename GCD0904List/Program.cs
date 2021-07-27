@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace GCD0904List
 {
@@ -95,6 +94,32 @@ namespace GCD0904List
 			// Method 3: God Mode
 			numbers = Console.ReadLine().Split(' ')
 				.Select(int.Parse).ToList();
+
+			// Sorting Lists
+			List<string> names = new List<string>()
+			{
+				"John Wick",
+				"John Paul",
+				"Harry Potter",
+				"Mr. Bean",
+				"Bruce Wayne"
+			};
+
+			Console.WriteLine("Soring by ascending");
+			names.Sort(); // Sorting by ascending
+			foreach (var item in names)
+			{
+				Console.WriteLine(item);
+			}
+
+			Console.WriteLine("Soring by descending");
+			names.Reverse();  // Sorting by descending
+			foreach (var item in names)
+			{
+				Console.WriteLine(item);
+			}
+
+			Console.ReadLine();
 		}
 	}
 }
