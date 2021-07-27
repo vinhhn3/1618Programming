@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace GCD0904ArrayAndList
 {
@@ -96,6 +97,19 @@ namespace GCD0904ArrayAndList
 				Console.WriteLine($"Value of numbers[{index}] is: {numbers[index]}");
 			}
 
+			// Reading Array version 3
+			Console.WriteLine("Reading array version 3");
+			Console.Write("Enter a list of numbers: ");
+			values = Console.ReadLine();
+			arrayValues = values.Split(' ');
+
+			numbers = arrayValues.Select(int.Parse).ToArray();
+
+			// Reading Array version 4
+			Console.WriteLine("Reading array version 4");
+			Console.Write("Enter a list of numbers: ");
+			numbers = Console.ReadLine().Split(' ')
+				.Select(int.Parse).ToArray();
 
 			Console.ReadLine();
 		}
