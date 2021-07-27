@@ -41,6 +41,7 @@ namespace GCD0904ArrayAndList
 				"Sunday"			// index = 6
 			};
 
+			Console.Write("Enter day [1...7]: ");
 			int dayInput = int.Parse(Console.ReadLine());
 			if (dayInput >= 1 && dayInput <= 7)
 			{
@@ -55,6 +56,27 @@ namespace GCD0904ArrayAndList
 			//days[0] = "Monday";
 			//days[1] = " Tuesday";
 
+			// Reading Array
+			// Define array length
+			Console.Write("Enter array length: ");
+			arrayLength = int.Parse(Console.ReadLine());
+
+			// Declare array numbers with arrayLength
+			numbers = new int[arrayLength];
+
+			// Assign value from keyboard
+			for (int index = 0; index < numbers.Length; index++)
+			{
+				Console.Write("Enter value: ");
+				numbers[index] = int.Parse(Console.ReadLine());
+			}
+
+			// Print all values of numbers to screen
+			for (int index = 0; index < numbers.Length; index++)
+			{
+				Console.WriteLine($"Value of numbers[{index}] is: {numbers[index]}");
+
+			}
 
 			Console.ReadLine();
 		}
