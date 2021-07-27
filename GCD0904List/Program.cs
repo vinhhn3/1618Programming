@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace GCD0904List
 {
@@ -57,7 +58,47 @@ namespace GCD0904List
 				// List: can use index like array to read value
 				Console.WriteLine(names[i]);
 			}
+
+			// Reading Lists from the Console
+			// Method 1: Use "for" loop
+			// First, read from the console the list length:
+			int n = int.Parse(Console.ReadLine());
+
+			// Next, create a list of given size n and read its elements:
+			List<int> list = new List<int>();
+			for (int i = 0; i < n; i++)
+			{
+				int number = int.Parse(Console.ReadLine());
+				list.Add(number);
+			}
+
+			Console.WriteLine("Display all values in list");
+			foreach (var item in list)
+			{
+				Console.WriteLine(item);
+			}
+
 			Console.ReadLine();
+
+
+			// Method 2: LINQ
+			string values = Console.ReadLine();
+			List<string> listValues = values.Split(' ').ToList();
+
+			List<int> numbers = new List<int>();
+			foreach (var item in listValues)
+			{
+				numbers.Add(int.Parse(item));
+			}
+
+
+			// Method 3: God Mode
+			numbers = Console.ReadLine().Split(' ')
+				.Select(int.Parse).ToList();
 		}
 	}
 }
+
+
+
+
