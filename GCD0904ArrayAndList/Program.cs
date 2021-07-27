@@ -36,7 +36,7 @@ namespace GCD0904ArrayAndList
 				"Tuesday",		// index = 1
 				"Wednesday",	// index = 2
 				"Thursday",		// index = 3
-				"Friday",     // index = 4
+				"Friday",			// index = 4
 				"Saturday",		// index = 5
 				"Sunday"			// index = 6
 			};
@@ -75,8 +75,27 @@ namespace GCD0904ArrayAndList
 			for (int index = 0; index < numbers.Length; index++)
 			{
 				Console.WriteLine($"Value of numbers[{index}] is: {numbers[index]}");
-
 			}
+
+			// Reading Array version 2
+			Console.WriteLine("Reading array version 2");
+			Console.Write("Enter a list of numbers: ");
+			string values = Console.ReadLine();
+			string[] arrayValues = values.Split(' ');
+
+			numbers = new int[arrayValues.Length];
+			// Convert string to int
+			for (int index = 0; index < numbers.Length; index++)
+			{
+				numbers[index] = int.Parse(arrayValues[index]);
+			}
+
+			// Print values to screen
+			for (int index = 0; index < numbers.Length; index++)
+			{
+				Console.WriteLine($"Value of numbers[{index}] is: {numbers[index]}");
+			}
+
 
 			Console.ReadLine();
 		}
