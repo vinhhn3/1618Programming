@@ -27,7 +27,34 @@ namespace GCD0904ArrayAndList
 
 			// Exception because 100 > length of array numbers (10)
 			// Array: static
-			numbers[100] = 20;
+			// numbers[100] = 20;
+
+			// Days of Week 
+			// Declare array and assign values
+			string[] days = {
+				"Monday",			// index = 0
+				"Tuesday",		// index = 1
+				"Wednesday",	// index = 2
+				"Thursday",		// index = 3
+				"Friday",     // index = 4
+				"Saturday",		// index = 5
+				"Sunday"			// index = 6
+			};
+
+			int dayInput = int.Parse(Console.ReadLine());
+			if (dayInput >= 1 && dayInput <= 7)
+			{
+				Console.WriteLine(days[dayInput - 1]);
+			}
+			else
+			{
+				Console.WriteLine("Invalid Input ...");
+			}
+
+			//string[] days = new string[7];
+			//days[0] = "Monday";
+			//days[1] = " Tuesday";
+
 
 			Console.ReadLine();
 		}
