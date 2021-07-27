@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCD0904.BasicSyntax", "1618
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCD0904.DataTypesAndVariables", "GCD0904.DataTypesAndVariables\GCD0904.DataTypesAndVariables.csproj", "{5A02D12F-A227-48B4-8D2E-36D300FAF3F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCD0904ArrayAndList", "GCD0904ArrayAndList\GCD0904ArrayAndList.csproj", "{1A377789-1040-4844-A428-358EF3195941}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCD0904Array", "GCD0904ArrayAndList\GCD0904Array.csproj", "{1A377789-1040-4844-A428-358EF3195941}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCD0904List", "GCD0904List\GCD0904List.csproj", "{E9715DDA-DF30-45A3-9CC7-BCAA237DDAA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{1A377789-1040-4844-A428-358EF3195941}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A377789-1040-4844-A428-358EF3195941}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A377789-1040-4844-A428-358EF3195941}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9715DDA-DF30-45A3-9CC7-BCAA237DDAA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9715DDA-DF30-45A3-9CC7-BCAA237DDAA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9715DDA-DF30-45A3-9CC7-BCAA237DDAA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9715DDA-DF30-45A3-9CC7-BCAA237DDAA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
