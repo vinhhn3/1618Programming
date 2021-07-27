@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace GCD0904List
 {
@@ -152,6 +153,25 @@ namespace GCD0904List
 			{
 				Console.WriteLine(item);
 			}
+
+			// Sum all positive numbers
+			nums = new List<int>
+			{
+				-3, -5, 33, 12,-12,1220, 12
+			};
+
+			// Method 1: foreach
+			int sumPositiveNumers = 0;
+			foreach (var item in nums)
+			{
+				if (item > 0)
+				{
+					sumPositiveNumers = sumPositiveNumers + item;
+				}
+			}
+
+			// Method 2 : LINQ
+			sumPositiveNumers = nums.Where(i => i > 0).Sum();
 
 			Console.ReadLine();
 		}
