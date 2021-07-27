@@ -157,6 +157,20 @@ namespace GCD0904ArrayAndList
 				items[items.Length - 1 - i] = tempString;
 			}
 
+			// Foreach
+
+			// Print all values of numbers to screen
+			Console.WriteLine("Use for loop");
+			for (int index = 0; index < numbers.Length; index++)
+			{
+				Console.WriteLine($"Value of numbers[{index}] is: {numbers[index]}");
+			}
+
+			Console.WriteLine("Use foreach");
+			foreach (var item in numbers)
+			{
+				Console.WriteLine("Value of item: " + item);
+			}
 
 			Console.ReadLine();
 		}
