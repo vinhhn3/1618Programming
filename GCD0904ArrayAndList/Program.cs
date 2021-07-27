@@ -111,6 +111,31 @@ namespace GCD0904ArrayAndList
 			numbers = Console.ReadLine().Split(' ')
 				.Select(int.Parse).ToArray();
 
+			// Print Numbers in Reverse Order
+			numbers = new int[]
+			{
+				1,2,3,4,5,6,7,8,9
+			};
+
+			// Method 1
+			// From tail to head
+			for (int i = numbers.Length - 1; i >= 0; i--)
+			{
+				Console.Write(numbers[i] + " ");
+			}
+			Console.WriteLine();
+
+			// Method 2
+			// Reverse array
+			// Print head to tail
+			numbers = numbers.Reverse().ToArray();
+			for (int i = 0; i < numbers.Length; i++)
+			{
+				Console.Write(numbers[i] + " ");
+
+			}
+			Console.WriteLine();
+
 			Console.ReadLine();
 		}
 	}
