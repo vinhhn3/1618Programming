@@ -59,6 +59,36 @@ namespace GCD0904FunctionExercises
 		}
 
 		//	Problem: Printing Triangle
+		static void PrintTriangle(int size)
+		{
+			PrintFirstHalfTriangle(size);
+			PrintSecondHalfTraingle(size);
+		}
+
+		static void PrintFirstHalfTriangle(int size)
+		{
+			for (int i = 1; i <= size; i++)
+			{
+				PrintLine(i);
+			}
+		}
+
+		static void PrintSecondHalfTraingle(int size)
+		{
+			for (int i = size - 1; i >= 1; i--)
+			{
+				PrintLine(i);
+			}
+		}
+
+		static void PrintLine(int size)
+		{
+			for (int i = 1; i <= size; i++)
+			{
+				Console.Write(i + " ");
+			}
+			Console.WriteLine();
+		}
 
 		static void Main(string[] args)
 		{
@@ -76,7 +106,13 @@ namespace GCD0904FunctionExercises
 			PrintGrade(5.80);
 			PrintGrade(6.40);
 
+			//	Problem: Printing Triangle
+			PrintLine(3);
+			PrintLine(4);
+			PrintFirstHalfTriangle(3);
+			PrintSecondHalfTraingle(3);
 
+			PrintTriangle(4);
 
 			Console.ReadLine();
 		}
