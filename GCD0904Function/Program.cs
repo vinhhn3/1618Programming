@@ -28,8 +28,30 @@ namespace GCD0904Function
 			// = a + (b + c)
 			// = a + SumTwoNumbers(b, c)
 			// = SumTwoNumbers(a, SumTwoNumbers(b, c))
+			return result; // Create new value
+		}
 
-			return result;
+		// void type method
+		// do not return any new value !!!
+		// Use to display to screen
+		static void PrintHello()
+		{
+			Console.WriteLine("Hello World ...");
+			Console.WriteLine("Welcome to C# ...");
+			Console.WriteLine("CSharp is beautiful ...");
+		}
+
+		static void PrintMenu()
+		{
+			Console.WriteLine("===WELCOME TO MY APP===");
+			Console.WriteLine("1. Create new order");
+			Console.WriteLine("2. Create payment");
+			Console.WriteLine("3. Quit the App");
+		}
+
+		static void PrintSum(int sum)
+		{
+			Console.WriteLine($"sum = {sum}");
 		}
 
 		static void Main(string[] args)
@@ -38,10 +60,15 @@ namespace GCD0904Function
 			int numberB = 20;
 			// Call function SumTwoNumbers(int a, int b)
 			int sum = SumTwoNumbers(numberA, numberB);
+
+			PrintSum(sum);
 			int numberC = 30;
 			sum = SumThreeNumbers(numberA, numberB, numberC);
 
-			Console.WriteLine(sum);
+			PrintSum(sum);
+			PrintHello();
+
+			PrintMenu();
 
 			Console.ReadLine();
 		}
