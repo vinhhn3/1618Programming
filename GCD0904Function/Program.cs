@@ -14,11 +14,7 @@ namespace GCD0904Function
 		//	return Result;
 		// }
 
-		static int SumTwoNumbers(int a, int b)
-		{
-			int result = a + b;
-			return result;
-		}
+
 
 		static int SumThreeNumbers(int a, int b, int c)
 		{
@@ -54,6 +50,31 @@ namespace GCD0904Function
 			Console.WriteLine($"sum = {sum}");
 		}
 
+		// "return" keyword
+		// stop method immediately
+		// return value
+		static int SumTwoNumbers(int a, int b)
+		{
+			int result = a + b;
+			return result;
+		}
+
+		// for void type method
+		// return => stop function 
+		static void PrintOneToTen()
+		{
+			for (int i = 1; i <= 10; i++)
+			{
+				Console.WriteLine(i);
+
+				// When i = 7 => stop function
+				if (i == 7)
+				{
+					return;
+				}
+			}
+		}
+
 		static void Main(string[] args)
 		{
 			int numberA = 10;
@@ -69,6 +90,8 @@ namespace GCD0904Function
 			PrintHello();
 
 			PrintMenu();
+
+			PrintOneToTen();
 
 			Console.ReadLine();
 		}
