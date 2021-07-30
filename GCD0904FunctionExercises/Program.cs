@@ -111,6 +111,17 @@ namespace GCD0904FunctionExercises
 			Console.WriteLine();
 		}
 
+		//	Problem: Calculate Rectangle Area
+		static double CalculateRectangleArea(double height, double width)
+		{
+			if (height <= 0 || width <= 0)
+			{
+				Console.WriteLine("Invalid input(s) ...");
+				return -1;
+			}
+			return height * width;
+		}
+
 		static void Main(string[] args)
 		{
 			//	Sign of integer number
@@ -134,8 +145,13 @@ namespace GCD0904FunctionExercises
 			PrintSecondHalfTraingle(3);
 
 			PrintTriangle(4);
-
 			PrintTriangle2ndVersion(4);
+
+			//	Problem: Calculate Rectangle Area
+			Console.WriteLine(CalculateRectangleArea(1.00, 2.34));
+			Console.WriteLine(CalculateRectangleArea(2.43, 12.34));
+			Console.WriteLine(CalculateRectangleArea(0.00, -1.00));
+			Console.WriteLine(CalculateRectangleArea(-1.00, 2.34));
 
 			Console.ReadLine();
 		}
