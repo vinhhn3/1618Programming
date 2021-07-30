@@ -65,6 +65,27 @@ namespace GCD0904FunctionExercises
 			PrintSecondHalfTraingle(size);
 		}
 
+		static void PrintTriangle2ndVersion(int size)
+		{
+			for (int i = 1; i <= size; i++)
+			{
+				for (int j = 1; j <= i; j++)
+				{
+					Console.Write(j + " ");
+				}
+				Console.WriteLine();
+			}
+
+			for (int x = size - 1; x >= 1; x--)
+			{
+				for (int y = 1; y <= x; y++)
+				{
+					Console.Write(y + " ");
+				}
+				Console.WriteLine();
+			}
+		}
+
 		static void PrintFirstHalfTriangle(int size)
 		{
 			for (int i = 1; i <= size; i++)
@@ -113,6 +134,8 @@ namespace GCD0904FunctionExercises
 			PrintSecondHalfTraingle(3);
 
 			PrintTriangle(4);
+
+			PrintTriangle2ndVersion(4);
 
 			Console.ReadLine();
 		}
