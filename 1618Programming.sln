@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCD0904List", "GCD0904List\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCD0904Function", "GCD0904Function\GCD0904Function.csproj", "{6822D003-CFD7-42EA-BF6E-3BC36916A363}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCD0904FunctionExercises", "GCD0904FunctionExercises\GCD0904FunctionExercises.csproj", "{BBC8B38F-1848-49F1-A28B-71D3B8FFE95F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{6822D003-CFD7-42EA-BF6E-3BC36916A363}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6822D003-CFD7-42EA-BF6E-3BC36916A363}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6822D003-CFD7-42EA-BF6E-3BC36916A363}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBC8B38F-1848-49F1-A28B-71D3B8FFE95F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBC8B38F-1848-49F1-A28B-71D3B8FFE95F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBC8B38F-1848-49F1-A28B-71D3B8FFE95F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBC8B38F-1848-49F1-A28B-71D3B8FFE95F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
