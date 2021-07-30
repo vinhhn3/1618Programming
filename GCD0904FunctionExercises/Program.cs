@@ -141,6 +141,45 @@ namespace GCD0904FunctionExercises
 			return result;
 		}
 
+		//	Problem: Greater of Two Values
+		static int GetMax(int value1, int value2)
+		{
+			if (value1 > value2)
+			{
+				return value1;
+			}
+			else return value2;
+		}
+
+		static char GetMax(char value1, char value2)
+		{
+			if (value1 > value2)
+			{
+				return value1;
+			}
+			else return value2;
+		}
+
+		static string GetMax(string value1, string value2)
+		{
+			int stringCompare = value1.CompareTo(value2);
+
+			if (stringCompare == 0)
+			{
+				return value1;
+			}
+			else if (stringCompare > 0)
+			{
+				return value1;
+			}
+			else
+			{
+				return value2;
+			}
+
+		}
+
+
 		static void Main(string[] args)
 		{
 			//	Sign of integer number
@@ -177,6 +216,13 @@ namespace GCD0904FunctionExercises
 			Console.WriteLine(RepeatString("String", 4));
 			Console.WriteLine(RepeatString("String", 0));
 			Console.WriteLine(RepeatString("String", -1));
+
+			//	Problem: Greater of Two Values
+			Console.WriteLine(GetMax(10, 20));
+			Console.WriteLine(GetMax('a', 'z'));
+			Console.WriteLine(GetMax("aaa", "bbb"));
+			Console.WriteLine(GetMax("aaa", "aaa"));
+			Console.WriteLine(GetMax("bbb", "aaa"));
 
 			Console.ReadLine();
 		}
