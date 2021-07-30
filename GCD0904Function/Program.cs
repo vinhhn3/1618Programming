@@ -102,6 +102,38 @@ namespace GCD0904Function
 			Console.WriteLine($"Hello {fullName}, you are {age} years old");
 		}
 
+		// ********************************************************************	//
+		// 														RECAP																			//
+		// ********************************************************************	//					
+		// - Declare function
+		//	+ DataType return
+		//	+ Parameters
+		//	+	Body / Process of function
+		// - Use function
+		//	+ Call in main()
+		// 	+ Call in another function
+		// - void type method
+		// 	+ Do not return any value
+		// - "return" keyword
+		// 	+ create new value
+		// 	+ stop method's execution immediately 
+		// - Overloading Methods
+		//	+ Same name but process differently
+		//	+ based type of parameters
+		//	+ based order of parameters
+		// - Stack and Heap (to be continued ...)
+		// - How to name a function
+
+		static void IncreaseNumber(int a)
+		{
+			Console.WriteLine("Begin function IncreaseNumber");
+			a = a + 1;
+			Console.WriteLine(a);
+			Console.WriteLine("End function IncreaseNumber");
+		}
+
+
+
 		static void Main(string[] args)
 		{
 			int numberA = 10;
@@ -127,7 +159,28 @@ namespace GCD0904Function
 
 			PrintHello(300, "Vinh Hoang");
 
+			numberA = 100; // Primitive data => declare Stack
+			Console.WriteLine("Value of numberA: " + numberA);
+			IncreaseNumber(numberA); // Function run Heap
+			Console.WriteLine("Value of numberA: " + numberA);
+
+			Console.WriteLine("=== Increase Array ===");
+
+			int[] arr = new int[]
+			{
+				1
+			};
+
+			Console.WriteLine(arr[0]);    // 1 Declare arr => Heap
+			IncreaseNumber(arr);          // 2 Function run heap
+			Console.WriteLine(arr[0]);    // 2 
 			Console.ReadLine();
 		}
+		static void IncreaseNumber(int[] a)
+		{
+			a[0] = a[0] + 1;
+			Console.WriteLine("Value inside function: " + a[0]);
+		}
+
 	}
 }
