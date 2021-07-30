@@ -122,6 +122,25 @@ namespace GCD0904FunctionExercises
 			return height * width;
 		}
 
+		// Problem: Repeat String
+		static string RepeatString(string str, int time)
+		{
+			if (time <= 0)
+			{
+				Console.WriteLine("Invalid time ...");
+				return "";
+			}
+			string result = str;
+			int i = 1;
+			while (i < time)
+			{
+				result = result + str;
+				i++;
+			}
+
+			return result;
+		}
+
 		static void Main(string[] args)
 		{
 			//	Sign of integer number
@@ -152,6 +171,12 @@ namespace GCD0904FunctionExercises
 			Console.WriteLine(CalculateRectangleArea(2.43, 12.34));
 			Console.WriteLine(CalculateRectangleArea(0.00, -1.00));
 			Console.WriteLine(CalculateRectangleArea(-1.00, 2.34));
+
+			// Problem: Repeat String
+			Console.WriteLine(RepeatString("abc", 3));
+			Console.WriteLine(RepeatString("String", 4));
+			Console.WriteLine(RepeatString("String", 0));
+			Console.WriteLine(RepeatString("String", -1));
 
 			Console.ReadLine();
 		}
