@@ -20,12 +20,58 @@ namespace GCD0904FunctionExercises
 				Console.WriteLine($"The number {0} is zero");
 			}
 		}
+
+		//	Problem: Grades
+		//	Write a method that receives a grade between 2.00 and 6.00
+		//	and prints the corresponding grade in words
+		//	2.00 - 2.99 - "Fail"
+		//	3.00 - 3.49 - "Poor"
+		//	3.50 - 4.49 - "Good"
+		//	4.50 - 5.49 - "Very good"
+		//	5.50 - 6.00 - "Excellent"
+		//	Else - "Invalid mark"
+		static void PrintGrade(double mark)
+		{
+			if (mark >= 2.00 && mark <= 2.99)
+			{
+				Console.WriteLine("Fail");
+			}
+			else if (mark >= 3.00 && mark <= 3.49)
+			{
+				Console.WriteLine("Poor");
+			}
+			else if (mark >= 3.50 && mark <= 4.49)
+			{
+				Console.WriteLine("Good");
+			}
+			else if (mark >= 4.50 && mark <= 5.49)
+			{
+				Console.WriteLine("Very Good");
+			}
+			else if (mark >= 5.50 && mark <= 6.00)
+			{
+				Console.WriteLine("Excellent");
+			}
+			else
+			{
+				Console.WriteLine("Invalid Mark");
+			}
+		}
 		static void Main(string[] args)
 		{
 			//	Sign of integer number
 			PrintSign(10);
 			PrintSign(-10);
 			PrintSign(0);
+
+			// Problem: Grades
+			PrintGrade(1.00);
+			PrintGrade(2.40);
+			PrintGrade(3.40);
+			PrintGrade(4.40);
+			PrintGrade(5.40);
+			PrintGrade(5.80);
+			PrintGrade(6.40);
 
 
 
