@@ -4,17 +4,14 @@ namespace GCD0904Function
 {
 	class Program
 	{
-
 		// Function 
 		// Repeat code 
 		// Function : Input => Process => Result
 		// Declare:
 		// DataTypeReturn FunctionName (input_1, input_2){
-		//	doSomething(); Process
+		//	doSomething(); => Process
 		//	return Result;
 		// }
-
-
 
 		static int SumThreeNumbers(int a, int b, int c)
 		{
@@ -75,6 +72,36 @@ namespace GCD0904Function
 			}
 		}
 
+		// Overloading methods
+		// Same Function Name
+
+		// => Process differently based parameters
+		static void PrintHello(string fullName)
+		{
+			Console.WriteLine("Hello " + fullName);
+			Console.WriteLine("Welcome to CSharp ...");
+		}
+
+		// => Return different data type
+		static string PrintHello(string fullName, int age)
+		{
+			return $"Hello {fullName}, you are {age} years old ...";
+		}
+
+		// error
+		// cannot have the same function name with same parameters 
+		// but return different data type
+		//static void PrintHello(string fullName, int age)
+		//{
+		//	Console.WriteLine("Vinh Hoang");
+		//}
+
+		// => based order of parameters
+		static void PrintHello(int age, string fullName)
+		{
+			Console.WriteLine($"Hello {fullName}, you are {age} years old");
+		}
+
 		static void Main(string[] args)
 		{
 			int numberA = 10;
@@ -92,6 +119,13 @@ namespace GCD0904Function
 			PrintMenu();
 
 			PrintOneToTen();
+
+			PrintHello();               // void
+			PrintHello("Vinh Hoang");   // void
+			string hello = PrintHello("Vinh Hoang", 300); // string
+			Console.WriteLine(hello);
+
+			PrintHello(300, "Vinh Hoang");
 
 			Console.ReadLine();
 		}
