@@ -132,8 +132,38 @@ namespace GCD0904Function
 			Console.WriteLine("End function IncreaseNumber");
 		}
 
+		//	Naming and best practices
+		//	Function:
+		//		- Meaningful 
+		//		- PascalCase: RemoveById, UpdateStudentById
+		//		- [Verb] + [Noun]: SumTwoNumbers, FindStudent, FindHighestMark
+		//		- English, no Vietnamese
+		//		- camelCase for params: firstName, lastName, userList, 
+		//	Code can documents itself => Code Clean
+		//	Clean Code - Uncle Bob
 
 
+		static void PrintHeader()
+		{
+			Console.WriteLine("This is Header");
+		}
+
+		static void PrintBody()
+		{
+			Console.WriteLine("This is Body");
+		}
+
+		static void PrintFooter()
+		{
+			Console.WriteLine("This is Footer");
+		}
+
+		static void PrintReceipt()
+		{
+			PrintHeader();
+			PrintBody();
+			PrintFooter();
+		}
 		static void Main(string[] args)
 		{
 			int numberA = 10;
