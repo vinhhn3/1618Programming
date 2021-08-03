@@ -41,6 +41,33 @@ namespace GCD0904ClassesAndObjectsExercises
 				}
 			}
 
+			// Problem: Students
+			List<Student> students = new List<Student>();
+			string inputStudent = Console.ReadLine();
+
+			while (!inputStudent.Equals("end"))
+			{
+				string[] seperateInputStudent = inputStudent.Split(' ').ToArray();
+				Student student = new Student(
+					seperateInputStudent[0],
+					seperateInputStudent[1],
+					int.Parse(seperateInputStudent[2]),
+					seperateInputStudent[3]
+					);
+
+				students.Add(student);
+				inputStudent = Console.ReadLine();
+			}
+
+			string homeTown = Console.ReadLine();
+			foreach (var item in students)
+			{
+				if (item.HomeTown.Equals(homeTown))
+				{
+					item.PrintInfo();
+				}
+			}
+
 			Console.ReadLine();
 		}
 	}
