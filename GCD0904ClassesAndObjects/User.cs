@@ -10,6 +10,27 @@ namespace GCD0904ClassesAndObjects
 		public string Address;
 		public int Id;
 
+		// Constructor
+		// Constructor without parameters
+		// Usage: set default Value
+		public User()
+		{
+			FullName = "Default Name";
+			Age = -1;
+			Address = "Default Address";
+			Id = -1;
+		}
+
+		// Constructor with parameters
+		public User(string fullName, string address, int age, int id)
+		{
+			FullName = fullName;
+			Address = address;
+			Age = age;
+			Id = id;
+		}
+
+
 		// Actions
 		public void Talk()
 		{
@@ -29,6 +50,14 @@ namespace GCD0904ClassesAndObjects
 		public void Sleep()
 		{
 			Console.WriteLine("User is sleeping ...");
+		}
+
+		public void PrintInfo()
+		{
+			Console.WriteLine("Full Name: " + FullName);
+			Console.WriteLine("Age: " + Age);
+			Console.WriteLine("Address: " + Address);
+			Console.WriteLine("Id: " + Id);
 		}
 	}
 }

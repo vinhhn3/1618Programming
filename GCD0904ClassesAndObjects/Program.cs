@@ -29,7 +29,25 @@ namespace GCD0904ClassesAndObjects
 			firstUser.Run();
 			firstUser.Sleep();
 
+			// Declare a second User object
+			User secondUser = new User();
 
+			// Assign value to properties
+			secondUser.FullName = "Vinh Tam";
+			secondUser.Age = 10;
+			secondUser.Address = "Le Lai";
+			secondUser.Id = 345;
+
+			// Print info of secondUser
+			secondUser.PrintInfo();
+
+			// Declare an User object with Constructor
+			User thirdUser = new User();
+			thirdUser.PrintInfo();
+
+			// Delcare an User object with parameters
+			User fourthUser = new User("John Lennon", "Baker Street", 50, 999);
+			fourthUser.PrintInfo();
 
 			Console.ReadLine();
 		}
