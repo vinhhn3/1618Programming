@@ -49,6 +49,16 @@ namespace GCD0904ClassesAndObjects
 			User fourthUser = new User("John Lennon", "Baker Street", 50, 999);
 			fourthUser.PrintInfo();
 
+			// Interaction between objects
+			secondUser.Call(fourthUser);
+
+			Monster monster = new Monster();
+			monster.PrintInfo();
+
+			secondUser.Hit(monster);
+			monster.PrintInfo();
+
+
 			Console.ReadLine();
 		}
 	}

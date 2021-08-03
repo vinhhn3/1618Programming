@@ -59,5 +59,17 @@ namespace GCD0904ClassesAndObjects
 			Console.WriteLine("Address: " + Address);
 			Console.WriteLine("Id: " + Id);
 		}
+
+		public void Call(User guest)
+		{
+			Console.WriteLine("Hello, my name is: " + FullName);
+			Console.WriteLine("I am talking to: " + guest.FullName);
+		}
+
+		public void Hit(Monster monster)
+		{
+			Console.WriteLine(FullName + "is hitting " + monster.Name);
+			monster.HealthPoints = monster.HealthPoints - 2;
+		}
 	}
 }
