@@ -2,9 +2,6 @@
 
 namespace GCD0904ClassesAndObjects
 {
-
-
-
 	class Program
 	{
 		static void Main(string[] args)
@@ -57,7 +54,6 @@ namespace GCD0904ClassesAndObjects
 
 			secondUser.Hit(monster);
 			monster.PrintInfo();
-
 
 			Console.ReadLine();
 		}
