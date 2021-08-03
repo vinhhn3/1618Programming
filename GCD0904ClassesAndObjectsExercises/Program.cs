@@ -68,6 +68,29 @@ namespace GCD0904ClassesAndObjectsExercises
 				}
 			}
 
+			// Box Stores
+			List<Box> boxes = new List<Box>();
+			string inputBox = Console.ReadLine();
+
+			while (!inputBox.Equals("end"))
+			{
+				string[] seperateInputBox = inputBox.Split(' ').ToArray();
+
+				Item item = new Item(seperateInputBox[1], double.Parse(seperateInputBox[3]));
+				Box box = new Box(
+					int.Parse(seperateInputBox[0]),
+					item,
+					int.Parse(seperateInputBox[2])
+				);
+				boxes.Add(box);
+
+				inputBox = Console.ReadLine();
+			}
+
+			foreach (var item in boxes)
+			{
+				item.PrintInfo();
+			}
 			Console.ReadLine();
 		}
 	}
