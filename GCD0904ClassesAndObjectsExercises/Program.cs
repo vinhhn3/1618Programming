@@ -76,12 +76,18 @@ namespace GCD0904ClassesAndObjectsExercises
 			{
 				string[] seperateInputBox = inputBox.Split(' ').ToArray();
 
-				Item item = new Item(seperateInputBox[1], double.Parse(seperateInputBox[3]));
-				Box box = new Box(
-					int.Parse(seperateInputBox[0]),
-					item,
-					int.Parse(seperateInputBox[2])
-				);
+				Item item = new Item()
+				{
+					Name = seperateInputBox[1],
+					Price = double.Parse(seperateInputBox[3])
+				};
+
+				Box box = new Box()
+				{
+					SerialNumber = int.Parse(seperateInputBox[0]),
+					Item = item,
+					ItemQuantity = int.Parse(seperateInputBox[2])
+				};
 				boxes.Add(box);
 
 				inputBox = Console.ReadLine();
