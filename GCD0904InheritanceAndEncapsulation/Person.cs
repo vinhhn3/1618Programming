@@ -1,4 +1,6 @@
-﻿namespace GCD0904InheritanceAndEncapsulation
+﻿using System;
+
+namespace GCD0904InheritanceAndEncapsulation
 {
 	class Person
 	{
@@ -16,6 +18,16 @@
 			FullName = fullName;
 			Age = age;
 			Address = address;
+		}
+
+		public void PrintInfo()
+		{
+			Console.WriteLine($"Full Name: {FullName}, Age: {Age}, Address: {Address} ");
+		}
+
+		public void GetAge()
+		{
+			Console.WriteLine("My age is: " + Age);
 		}
 	}
 }

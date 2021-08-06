@@ -15,6 +15,13 @@ namespace GCD0904InheritanceAndEncapsulation
 			Console.WriteLine(user.FullName + " " + user.Address + " " + user.Age
 				+ " " + user.Password + " " + user.Email);
 
+			Console.WriteLine("=========");
+			person.PrintInfo();
+			user.PrintInfo();
+
+			person.GetAge();
+			user.GetAge();
+
 			Console.ReadLine();
 		}
 	}

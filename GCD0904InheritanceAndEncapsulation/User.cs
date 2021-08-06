@@ -1,4 +1,6 @@
-﻿namespace GCD0904InheritanceAndEncapsulation
+﻿using System;
+
+namespace GCD0904InheritanceAndEncapsulation
 {
 	// class User inherits class Person
 	class User : Person
@@ -20,6 +22,13 @@
 			Address = address;
 			Email = email;
 			Password = password;
+		}
+
+		public void PrintInfo()
+		{
+			// Call function PrintInfo() of class Person
+			base.PrintInfo();
+			Console.WriteLine($"Email: {Email}, Password: {Password}");
 		}
 	}
 }
