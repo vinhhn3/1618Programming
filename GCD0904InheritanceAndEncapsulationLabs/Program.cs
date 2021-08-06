@@ -15,12 +15,12 @@ namespace GCD0904InheritanceAndEncapsulationLabs
 			dog.Bark();
 			dog.Eat();
 
-			puppy.Eat();    // class Animal
-			puppy.Bark();   // class Dog
-			puppy.Weep();   // class Puppy
+			puppy.Eat();    // function from class Animal
+			puppy.Bark();   // function from class Dog
+			puppy.Weep();   // function from class Puppy
 
-			cat.Eat();      // class Animal
-			cat.Meow();     // class Cat
+			cat.Eat();      // function from class Animal
+			cat.Meow();     // function form class Cat
 
 
 			Console.ReadLine();
@@ -33,16 +33,27 @@ namespace GCD0904InheritanceAndEncapsulationLabs
 				Person person = new Person(
 					cmdArgs[0], // FullName
 					cmdArgs[1], // LastName
-					int.Parse(cmdArgs[2])); // Age
+					int.Parse(cmdArgs[2]),    // Age
+					decimal.Parse(cmdArgs[3]) // Salary
+					);
+
 
 				persons.Add(person);      // Add new person in to List
 			}
 
+
+			// Order
 			persons.OrderBy(p => p.FirstName) // Order by FirstName
 						 .ThenBy(p => p.Age)        // Order by Age
 						 .ToList()                  // Convert result => List
 						 .ForEach(p => Console.WriteLine(p.ToString()));
 			// foreach item in List, print info
+
+			// Increase Salary for each person 50%
+			persons.ForEach(p => p.IncreaseSalary(50));
+
+			// Display all persons to screen
+			persons.ForEach(p => Console.WriteLine(p.ToString()));
 
 			Console.ReadLine();
 		}
