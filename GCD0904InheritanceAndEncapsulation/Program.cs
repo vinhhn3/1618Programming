@@ -27,7 +27,7 @@ namespace GCD0904InheritanceAndEncapsulation
 			person.Address = "ABC";
 
 			// due to _money, MultipleMoney() are private so in class Program,
-			// it can't access property  "_money" directly via "."
+			// it can't access property  "_money", function MultipleMoney() directly via "."
 			// person._money = 1000;
 			// person.MultipleMoney();
 
@@ -35,7 +35,11 @@ namespace GCD0904InheritanceAndEncapsulation
 			person.SetMoney(12345);
 			Console.WriteLine(person.GetMoney());
 
-			person.PrintInfo();
+			// Due to _id is protected, class Program can't access property "_id"
+			// person._id = 10;
+
+			Student student = new Student("John Doe", 123, "Baker", "Computing", "GCD0904");
+			student.PrintInfo();
 
 			Console.ReadLine();
 		}

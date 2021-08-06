@@ -12,10 +12,11 @@ namespace GCD0904InheritanceAndEncapsulation
 
 		// private keyboard
 		// allow only the current class access
-		// protect properties
 		private int _money;
 
 		// protected word
+		// allow the current class and child class access
+		protected int _id;
 
 		public Person()
 		{
@@ -29,6 +30,7 @@ namespace GCD0904InheritanceAndEncapsulation
 			Address = address;
 			_money = 1000;
 			MultipleMoney();
+			_id = 10;
 		}
 
 		public void PrintInfo()

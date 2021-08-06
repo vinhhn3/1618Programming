@@ -24,6 +24,9 @@ namespace GCD0904InheritanceAndEncapsulation
 		{
 			base.PrintInfo();
 			Console.WriteLine($"Major: {Major}, Class Name: {ClassName}");
+			// Because "_id" in class Person is protected
+			// Child classes (Student, User) can access _id directly
+			Console.WriteLine($"Id: {_id}");
 		}
 	}
 }

@@ -27,7 +27,9 @@ namespace GCD0904InheritanceAndEncapsulation
 		{
 			// Call function PrintInfo() of class Person
 			base.PrintInfo();
-			Console.WriteLine($"Email: {Email}, Password: {Password}");
+			// Because "_id" in class Person is protected
+			// Child classes (Student, User) can access _id directly
+			Console.WriteLine($"Email: {Email}, Password: {Password}, Id: {_id}");
 		}
 	}
 }
