@@ -15,11 +15,10 @@ namespace GCD0904InheritanceAndEncapsulation
 
 		public User(string fullName, int age,
 			string address, string email, string password)
+			// base: use constructor of class Person
+			// Person(string fullName, int age, string address)
+			: base(fullName, age, address)
 		{
-
-			FullName = fullName;
-			Age = age;
-			Address = address;
 			Email = email;
 			Password = password;
 		}
