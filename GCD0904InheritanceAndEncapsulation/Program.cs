@@ -22,6 +22,21 @@ namespace GCD0904InheritanceAndEncapsulation
 			person.GetAge();
 			user.GetAge();
 
+			// Encapsulation
+			person.Age = 10;
+			person.Address = "ABC";
+
+			// due to _money, MultipleMoney() are private so in class Program,
+			// it can't access property  "_money" directly via "."
+			// person._money = 1000;
+			// person.MultipleMoney();
+
+			// To access property _moeny, use functions instead
+			person.SetMoney(12345);
+			Console.WriteLine(person.GetMoney());
+
+			person.PrintInfo();
+
 			Console.ReadLine();
 		}
 	}
