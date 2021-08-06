@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCD0904ClassesAndObjects", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCD0904ClassesAndObjectsExercises", "GCD0904ClassesAndObjectsExercises\GCD0904ClassesAndObjectsExercises.csproj", "{3CDAE80A-7ADE-4F4C-BE45-A0DD0D517902}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCD0904InheritanceAndEncapsulation", "GCD0904InheritanceAndEncapsulation\GCD0904InheritanceAndEncapsulation.csproj", "{16DECB3D-1DF9-45E6-AA31-B93DDB39C1B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{3CDAE80A-7ADE-4F4C-BE45-A0DD0D517902}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CDAE80A-7ADE-4F4C-BE45-A0DD0D517902}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CDAE80A-7ADE-4F4C-BE45-A0DD0D517902}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16DECB3D-1DF9-45E6-AA31-B93DDB39C1B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16DECB3D-1DF9-45E6-AA31-B93DDB39C1B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16DECB3D-1DF9-45E6-AA31-B93DDB39C1B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16DECB3D-1DF9-45E6-AA31-B93DDB39C1B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
