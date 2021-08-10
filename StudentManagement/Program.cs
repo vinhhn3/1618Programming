@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace StudentManagement
+﻿namespace StudentManagement
 {
 	class Program
 	{
@@ -31,21 +29,15 @@ namespace StudentManagement
 						IO.ShowMessage(batch.RemoveStudentById(IO.EnterStudentId()));
 						break;
 					case MenuOptions.UPDATE_STUDENT:
-						bool result = batch.UpdateStudentById(
-							IO.EnterStudentId(),
-							IO.EnterStudentName(),
-							IO.EnterStudentMajor(),
-							IO.EnterStudentAge(),
-							IO.EnterStudentClass()
+						IO.ShowMessage(
+							batch.UpdateStudentById(
+								IO.EnterStudentId(),
+								IO.EnterStudentName(),
+								IO.EnterStudentMajor(),
+								IO.EnterStudentAge(),
+								IO.EnterStudentClass()
+								)
 							);
-						if (result)
-						{
-							Console.WriteLine("SUCCESSED !!!");
-						}
-						else
-						{
-							Console.WriteLine("FAILED !!!");
-						}
 						break;
 					case MenuOptions.GET_BY_ID:
 						IO.ToScreen(batch.GetStudentById(IO.EnterStudentId()));
