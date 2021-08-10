@@ -12,7 +12,11 @@ namespace StudentManagement
 		public const int UPDATE_STUDENT = 4;
 		public const int GET_BY_ID = 5;
 		public const int STATS = 6;
-		public const int EXIT = 7;
+		// TODO
+		public const int SEARCH_BY_CLASS_NAME = 7;
+		public const int SEARCH_BY_AGE = 8;
+		public const int SEARCH_BY_MARK = 9;
+		public const int EXIT = 10;
 	}
 	class Batch
 	{
@@ -76,7 +80,6 @@ namespace StudentManagement
 			Student newStudent = new Student(id, fullName, major, age, className, mark);
 			_students.Add(newStudent);
 		}
-
 		public string GetStatistics()
 		{
 			string result = "";

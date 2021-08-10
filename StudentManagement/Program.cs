@@ -60,6 +60,13 @@
 					case MenuOptions.STATS:
 						IO.ToScreen(batch.GetStatistics());
 						break;
+					// TODO
+					case MenuOptions.SEARCH_BY_AGE:
+						break;
+					case MenuOptions.SEARCH_BY_MARK:
+						break;
+					case MenuOptions.SEARCH_BY_CLASS_NAME:
+						break;
 					case MenuOptions.EXIT:
 						return;
 					default:
