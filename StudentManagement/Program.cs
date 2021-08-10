@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace StudentManagement
+﻿namespace StudentManagement
 {
 	class Program
 	{
@@ -25,17 +23,10 @@ namespace StudentManagement
 							IO.EnterStudentAge(),
 							IO.EnterStudentClass()
 							);
+						IO.ShowMessage(true);
 						break;
 					case MenuOptions.REMOVE_STUDENT:
-						bool result = batch.RemoveStudentById(IO.EnterStudentId());
-						if (result)
-						{
-							Console.WriteLine("REMOVE SUCCESS !!!");
-						}
-						else
-						{
-							Console.WriteLine("REMOVE FAILED !!!");
-						}
+						IO.ShowMessage(batch.RemoveStudentById(IO.EnterStudentId()));
 						break;
 					case MenuOptions.UPDATE_STUDENT:
 						// Todo

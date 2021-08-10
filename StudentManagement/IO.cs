@@ -73,5 +73,17 @@ namespace StudentManagement
 		{
 			Console.WriteLine("Invalid Input ...");
 		}
+
+		public static void ShowMessage(bool status)
+		{
+			if (status)
+			{
+				Console.WriteLine("SUCESSED !!!");
+			}
+			else
+			{
+				Console.WriteLine("FAILED !!!");
+			}
+		}
 	}
 }
