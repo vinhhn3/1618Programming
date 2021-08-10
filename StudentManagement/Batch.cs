@@ -7,7 +7,10 @@ namespace StudentManagement
 		public const int INIT = 0;
 		public const int GET_ALL = 1;
 		public const int ADD_STUDENT = 2;
-		public const int EXIT = 9;
+		public const int REMOVE_STUDENT = 3;
+		public const int UPDATE_STUDENT = 4;
+		public const int GET_BY_ID = 5;
+		public const int EXIT = 6;
 	}
 	class Batch
 	{

@@ -24,9 +24,20 @@
 							IO.EnterStudentClass()
 							);
 						break;
+					case MenuOptions.REMOVE_STUDENT:
+						// Todo
+						break;
+					case MenuOptions.UPDATE_STUDENT:
+						// Todo
+						break;
+					case MenuOptions.GET_BY_ID:
+						// Todo
+						break;
+
 					case MenuOptions.EXIT:
 						return;
 					default:
+						IO.InputError();
 						break;
 				}
 			}

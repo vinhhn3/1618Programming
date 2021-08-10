@@ -18,7 +18,10 @@ namespace StudentManagement
 			Console.WriteLine("Menu Options: ");
 			Console.WriteLine("1. Print all students info");
 			Console.WriteLine("2. Add a new Student");
-			Console.WriteLine("9. Exit Application");
+			Console.WriteLine("3. Remove Student by ID");
+			Console.WriteLine("4. Update Student by ID");
+			Console.WriteLine("5. Print Student info by ID");
+			Console.WriteLine("6. Exit Application");
 			return int.Parse(Console.ReadLine());
 		}
 
@@ -65,6 +68,11 @@ namespace StudentManagement
 		public static void ToScreen(string str)
 		{
 			Console.WriteLine(str);
+		}
+
+		public static void InputError()
+		{
+			Console.WriteLine("Invalid Input ...");
 		}
 	}
 }
