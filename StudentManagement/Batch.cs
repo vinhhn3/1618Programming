@@ -57,6 +57,16 @@ namespace StudentManagement
 			return false;
 		}
 
+		public bool UpdateStudentById(int id, string fullName, string major, int age, string className)
+		{
+			Student studentInBatch = _students.FirstOrDefault(s => s.Id.Equals(id));
+			if (studentInBatch == null) return false;
+			studentInBatch.FullName = fullName;
+			studentInBatch.Major = major;
+			studentInBatch.Age = age;
+			studentInBatch.ClassName = className;
+			return true;
+		}
 		public void AddStudent(int id, string fullName, string major, int age, string className)
 		{
 			Student newStudent = new Student(id, fullName, major, age, className);
