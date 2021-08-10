@@ -2,6 +2,13 @@
 
 namespace StudentManagement
 {
+	class MenuOptions
+	{
+		public const int INIT = 0;
+		public const int GET_ALL = 1;
+		public const int ADD_STUDENT = 2;
+		public const int EXIT = 9;
+	}
 	class Batch
 	{
 		private List<Student> _students;
