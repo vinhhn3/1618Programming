@@ -11,7 +11,8 @@ namespace StudentManagement
 		public const int REMOVE_STUDENT = 3;
 		public const int UPDATE_STUDENT = 4;
 		public const int GET_BY_ID = 5;
-		public const int EXIT = 6;
+		public const int STATS = 6;
+		public const int EXIT = 7;
 	}
 	class Batch
 	{
@@ -75,6 +76,26 @@ namespace StudentManagement
 			Student newStudent = new Student(id, fullName, major, age, className, mark);
 			_students.Add(newStudent);
 		}
+
+		public string GetStatistics()
+		{
+			string result = "";
+			int studentNumber = _students.Count;
+			double avgAge = _students.Average(s => s.Age);
+			double avgMark = _students.Average(s => s.Mark);
+			double highestMark = _students.Max(s => s.Mark);
+			double lowestMark = _students.Min(s => s.Mark);
+			result =
+				$"Number of students: {studentNumber} \n" +
+				$"Average age: {avgAge}\n" +
+				$"Average mark: {avgMark}\n" +
+				$"Highest Mark: {highestMark}\n" +
+				$"Lowest Mark: {lowestMark}\n";
+
+			return result;
+		}
+
+
 
 	}
 }

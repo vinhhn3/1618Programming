@@ -20,7 +20,8 @@ namespace StudentManagement
 			Console.WriteLine("3. Remove Student by ID");
 			Console.WriteLine("4. Update Student by ID");
 			Console.WriteLine("5. Print Student info by ID");
-			Console.WriteLine("6. Exit Application");
+			Console.WriteLine("6. Statistics");
+			Console.WriteLine("7. Exit Application");
 			return int.Parse(Console.ReadLine());
 		}
 
