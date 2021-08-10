@@ -46,14 +46,14 @@ namespace GCD0904InheritanceAndEncapsulationLabs
 			persons.OrderBy(p => p.FirstName) // Order by FirstName
 						 .ThenBy(p => p.Age)        // Order by Age
 						 .ToList()                  // Convert result => List
-						 .ForEach(p => Console.WriteLine(p.ToString()));
+						 .ForEach(p => Console.WriteLine(p.PrintInfo()));
 			// foreach item in List, print info
 
 			// Increase Salary for each person 50%
 			persons.ForEach(p => p.IncreaseSalary(50));
 
 			// Display all persons to screen
-			persons.ForEach(p => Console.WriteLine(p.ToString()));
+			persons.ForEach(p => Console.WriteLine(p.PrintInfo()));
 
 			Console.ReadLine();
 		}

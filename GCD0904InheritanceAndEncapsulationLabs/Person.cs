@@ -20,7 +20,7 @@
 			Salary = salary;
 		}
 
-		public override string ToString()
+		public string PrintInfo()
 		{
 			string result = $"{FirstName} {LastName} is {Age} years old. Salary is {Salary}";
 			return result;
