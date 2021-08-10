@@ -10,7 +10,6 @@ namespace StudentManagement
 		{
 			Console.WriteLine("========MENU==========");
 			Console.WriteLine("WELCOME TO THE APP");
-
 		}
 
 		public static int EnterMenuOption()

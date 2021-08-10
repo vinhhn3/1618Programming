@@ -1,4 +1,6 @@
-﻿namespace StudentManagement
+﻿using System;
+
+namespace StudentManagement
 {
 	class Program
 	{
@@ -25,7 +27,15 @@
 							);
 						break;
 					case MenuOptions.REMOVE_STUDENT:
-						// Todo
+						bool result = batch.RemoveStudentById(IO.EnterStudentId());
+						if (result)
+						{
+							Console.WriteLine("REMOVE SUCCESS !!!");
+						}
+						else
+						{
+							Console.WriteLine("REMOVE FAILED !!!");
+						}
 						break;
 					case MenuOptions.UPDATE_STUDENT:
 						// Todo

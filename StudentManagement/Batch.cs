@@ -38,13 +38,23 @@ namespace StudentManagement
 
 		public string GetStudentById(int id)
 		{
-			Student studentInBatch = _students.FirstOrDefault(s => s.Id.Equals(id));
+			Student studentInBatch = _students.FirstOrDefault(std => std.Id.Equals(id)); // LINQ
 			if (studentInBatch == null)
 			{
 				return "Not Exists";
 			}
 			return studentInBatch.ToString();
+		}
 
+		public bool RemoveStudentById(int id)
+		{
+			Student studentInBatch = _students.FirstOrDefault(s => s.Id.Equals(id));
+			if (studentInBatch != null)
+			{
+				_students.Remove(studentInBatch);
+				return true;
+			}
+			return false;
 		}
 
 		public void AddStudent(int id, string fullName, string major, int age, string className)
