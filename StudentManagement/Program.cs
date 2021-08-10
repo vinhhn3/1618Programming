@@ -21,7 +21,8 @@
 							IO.EnterStudentName(),
 							IO.EnterStudentMajor(),
 							IO.EnterStudentAge(),
-							IO.EnterStudentClass()
+							IO.EnterStudentClass(),
+							IO.EnterStudentMark()
 							);
 						IO.ShowMessage(true);
 						break;
@@ -35,7 +36,8 @@
 								IO.EnterStudentName(),
 								IO.EnterStudentMajor(),
 								IO.EnterStudentAge(),
-								IO.EnterStudentClass()
+								IO.EnterStudentClass(),
+								IO.EnterStudentMark()
 								)
 							);
 						break;

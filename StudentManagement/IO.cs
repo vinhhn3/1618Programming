@@ -59,6 +59,12 @@ namespace StudentManagement
 			return Console.ReadLine();
 		}
 
+		public static double EnterStudentMark()
+		{
+			Console.Write("Mark: ");
+			return double.Parse(Console.ReadLine());
+		}
+
 		public static int EnterIntValue()
 		{
 			return int.Parse(Console.ReadLine());

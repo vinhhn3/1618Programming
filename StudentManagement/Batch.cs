@@ -57,7 +57,8 @@ namespace StudentManagement
 			return false;
 		}
 
-		public bool UpdateStudentById(int id, string fullName, string major, int age, string className)
+		public bool UpdateStudentById(int id, string fullName, string major,
+			int age, string className, double mark)
 		{
 			Student studentInBatch = _students.FirstOrDefault(s => s.Id.Equals(id));
 			if (studentInBatch == null) return false;
@@ -65,11 +66,13 @@ namespace StudentManagement
 			studentInBatch.Major = major;
 			studentInBatch.Age = age;
 			studentInBatch.ClassName = className;
+			studentInBatch.Mark = mark;
 			return true;
 		}
-		public void AddStudent(int id, string fullName, string major, int age, string className)
+		public void AddStudent(int id, string fullName, string major,
+			int age, string className, double mark)
 		{
-			Student newStudent = new Student(id, fullName, major, age, className);
+			Student newStudent = new Student(id, fullName, major, age, className, mark);
 			_students.Add(newStudent);
 		}
 
