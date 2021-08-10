@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace StudentManagement
 {
@@ -33,6 +34,17 @@ namespace StudentManagement
 				result = result + s.ToString();
 			}
 			return result;
+		}
+
+		public string GetStudentById(int id)
+		{
+			Student studentInBatch = _students.FirstOrDefault(s => s.Id.Equals(id));
+			if (studentInBatch == null)
+			{
+				return "Not Exists";
+			}
+			return studentInBatch.ToString();
+
 		}
 
 		public void AddStudent(int id, string fullName, string major, int age, string className)

@@ -31,9 +31,8 @@
 						// Todo
 						break;
 					case MenuOptions.GET_BY_ID:
-						// Todo
+						IO.ToScreen(batch.GetStudentById(IO.EnterStudentId()));
 						break;
-
 					case MenuOptions.EXIT:
 						return;
 					default:
