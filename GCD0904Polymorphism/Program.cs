@@ -15,6 +15,13 @@ namespace GCD0904Polymorphism
 
 			Console.WriteLine(animal.Eat("meat", "water")); // string
 
+			// Overrding methods
+			// Parent class and Child class have the same function but it behave differently
+			Dog dog = new Dog();
+			dog.Eat();
+			Console.WriteLine(dog.Eat("meat"));
+			Console.WriteLine(dog.Eat("meat", "coca-cola"));
+
 			Console.ReadLine();
 		}
 	}
