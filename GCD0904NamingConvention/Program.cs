@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace GCD0904NamingConvention
 {
@@ -10,7 +11,8 @@ namespace GCD0904NamingConvention
 			Student student = new Student();
 			Student myStudent = new Student("Vinh Hoang", 30);
 
-			// Do not use Underscores in identifiers. Exception: you can prefix private fields with an underscore:
+			// Do not use Underscores in identifiers.
+			// Exception: you can prefix private fields with an underscore:
 			// Avoid
 			Student your_student = new Student();
 			DateTime date_of_birth = new DateTime();
@@ -30,6 +32,10 @@ namespace GCD0904NamingConvention
 
 			// Use Named Arguments in method calls
 			myStudent.DoHomeWork(homeWork: "Slide1", lab: "Labs2");
+
+			// Do use implicit type var for local variable declarations
+			List<Student> students = new List<Student>();
+			var myStudents = new List<Student>();
 		}
 	}
 }

@@ -11,7 +11,7 @@
 		public string FullName;
 		public int Age;
 
-		// private property: _camelCase 
+		// private property name: _camelCase 
 		private string _fullName;
 		private int _age;
 
