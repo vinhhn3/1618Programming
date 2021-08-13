@@ -45,11 +45,14 @@
   <ItemGroup>
     <Compile Include="Animal.cs" />
     <Compile Include="BeingFactory.cs" />
+    <Compile Include="Circle.cs" />
     <Compile Include="Human.cs" />
     <Compile Include="IBeing.cs" />
+    <Compile Include="IShape.cs" />
     <Compile Include="IRunnable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rectangle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

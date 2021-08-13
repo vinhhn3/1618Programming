@@ -80,6 +80,11 @@ namespace StudentManagement
 			Student newStudent = new Student(id, fullName, major, age, className, mark);
 			_students.Add(newStudent);
 		}
+
+		public void TestFunction()
+		{
+
+		}
 		public string GetStatistics()
 		{
 			string result = "";

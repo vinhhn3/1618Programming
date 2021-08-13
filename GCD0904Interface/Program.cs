@@ -28,6 +28,22 @@ namespace GCD0904Interface
 			// Can't Run because interface IBeing do not contains Run()
 			// myAnimal.Run(); 
 
+			Circle circle = new Circle(5.0);
+			Rectangle rectangle = new Rectangle(3.0, 5.0);
+
+			circle.Draw();
+			Console.WriteLine("Circle Area: " + circle.CalculateArea());
+
+			rectangle.Draw();
+			Console.WriteLine("Rectangle Area: " + rectangle.CalculateArea());
+
+			IShape shape = new Circle(3.0);
+			shape.Draw();
+			Console.WriteLine("Area of Shape: " + shape.CalculateArea());
+
+			shape = new Rectangle(5.0, 5.0);
+			shape.Draw();
+			Console.WriteLine("Area of Shape: " + shape.CalculateArea());
 
 			Console.ReadLine();
 		}

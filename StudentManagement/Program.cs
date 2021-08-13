@@ -6,8 +6,6 @@
 		static void Main(string[] args)
 		{
 			Batch batch = new Batch("2021 - 2022");
-
-
 			Application app = new Application(batch);
 			// Hard code list students
 			app.AddStudent(1, "Vinh Hoang", "Computing", 20, "GCD0903", 12);
