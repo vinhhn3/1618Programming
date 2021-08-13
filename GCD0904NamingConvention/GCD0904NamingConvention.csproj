@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B60A64DC-2141-42A7-AFA8-D045A01C0F21}</ProjectGuid>
+    <ProjectGuid>{728CE1C3-C786-4D52-80E0-7408C9B0BFE4}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>GCD0904Polymorphism</RootNamespace>
-    <AssemblyName>GCD0904Polymorphism</AssemblyName>
+    <RootNamespace>GCD0904NamingConvention</RootNamespace>
+    <AssemblyName>GCD0904NamingConvention</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,9 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animal.cs" />
-    <Compile Include="Dog.cs" />
-    <Compile Include="MathOperations.cs" />
+    <Compile Include="IRunnable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
