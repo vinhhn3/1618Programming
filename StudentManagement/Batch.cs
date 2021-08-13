@@ -18,9 +18,9 @@ namespace StudentManagement
 		public const int SEARCH_BY_MARK = 9;
 		public const int EXIT = 10;
 	}
-	class Batch
+	class Batch : IBatch
 	{
-		private List<Student> _students;
+		public List<Student> _students;
 		public string Name;
 
 		private Batch() { }
