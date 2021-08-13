@@ -18,6 +18,17 @@ namespace GCD0904Interface
 			animal.Walk();
 			animal.Stay();
 
+			// Return object Animal
+			IBeing myAnimal = BeingFactory.GetBeing("Animal");
+			myAnimal.Die();
+			myAnimal.Eat();
+			myAnimal.Born();
+			myAnimal.Drink();
+
+			// Can't Run because interface IBeing do not contains Run()
+			// myAnimal.Run(); 
+
+
 			Console.ReadLine();
 		}
 	}
