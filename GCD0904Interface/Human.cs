@@ -18,16 +18,25 @@ namespace GCD0904Interface
 			FullName = fullName;
 		}
 
+		public void Born()
+		{
+			Console.WriteLine("Human is born ...");
+		}
+
+		public void Die()
+		{
+			Console.WriteLine("Human is dying ...");
+		}
+
+		public void Drink()
+		{
+			Console.WriteLine("Human is drinking ...");
+		}
+
 		public void Eat()
 		{
 			Console.WriteLine("Human is eating ...");
 		}
-
-		public void Run()
-		{
-			Console.WriteLine("Human is running ...");
-		}
-
 		public void Sleep()
 		{
 			Console.WriteLine("Human is sleeping ...");

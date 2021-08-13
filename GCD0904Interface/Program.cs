@@ -12,8 +12,11 @@ namespace GCD0904Interface
 			animal.Run();
 			animal.Eat();
 
-			human.Run();
+			human.Drink();
 			human.Sleep();
+
+			animal.Walk();
+			animal.Stay();
 
 			Console.ReadLine();
 		}

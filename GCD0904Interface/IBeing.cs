@@ -4,8 +4,10 @@
 	public interface IBeing
 	{
 		// Declare only Data Type return and Function Name
+		void Born();
 		void Eat();
 		void Sleep();
-		void Run();
+		void Drink();
+		void Die();
 	}
 }
