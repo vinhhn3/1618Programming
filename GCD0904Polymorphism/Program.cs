@@ -22,6 +22,15 @@ namespace GCD0904Polymorphism
 			Console.WriteLine(dog.Eat("meat"));
 			Console.WriteLine(dog.Eat("meat", "coca-cola"));
 
+			// Math Operations exercise
+			// Use overloading methods
+			MathOperations math = new MathOperations();
+			Console.WriteLine(math.Add(10, 20));
+
+			Console.WriteLine(math.Add(123.012, 222.345));
+
+			Console.WriteLine(math.Add(1, 2, 3));
+
 			Console.ReadLine();
 		}
 	}
