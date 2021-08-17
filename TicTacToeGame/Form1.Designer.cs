@@ -31,7 +31,7 @@ namespace TicTacToeGame
 		{
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
+			this.gameResult = new System.Windows.Forms.Label();
 			this.resetButton = new System.Windows.Forms.Button();
 			this.button00 = new System.Windows.Forms.Button();
 			this.button01 = new System.Windows.Forms.Button();
@@ -65,15 +65,15 @@ namespace TicTacToeGame
 			this.label2.TabIndex = 1;
 			this.label2.Text = "Player 2";
 			// 
-			// label3
+			// gameResult
 			// 
-			this.label3.AutoSize = true;
-			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(335, 350);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(93, 29);
-			this.label3.TabIndex = 2;
-			this.label3.Text = "Result: ";
+			this.gameResult.AutoSize = true;
+			this.gameResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.gameResult.Location = new System.Drawing.Point(335, 350);
+			this.gameResult.Name = "gameResult";
+			this.gameResult.Size = new System.Drawing.Size(93, 29);
+			this.gameResult.TabIndex = 2;
+			this.gameResult.Text = "Result: ";
 			// 
 			// resetButton
 			// 
@@ -93,14 +93,6 @@ namespace TicTacToeGame
 			this.button00.TabIndex = 4;
 			this.button00.UseVisualStyleBackColor = true;
 			this.button00.Click += new System.EventHandler(this.button_Click);
-			this.button01.Click += new System.EventHandler(this.button_Click);
-			this.button02.Click += new System.EventHandler(this.button_Click);
-			this.button10.Click += new System.EventHandler(this.button_Click);
-			this.button11.Click += new System.EventHandler(this.button_Click);
-			this.button12.Click += new System.EventHandler(this.button_Click);
-			this.button20.Click += new System.EventHandler(this.button_Click);
-			this.button21.Click += new System.EventHandler(this.button_Click);
-			this.button22.Click += new System.EventHandler(this.button_Click);
 			// 
 			// button01
 			// 
@@ -109,7 +101,7 @@ namespace TicTacToeGame
 			this.button01.Size = new System.Drawing.Size(92, 54);
 			this.button01.TabIndex = 5;
 			this.button01.UseVisualStyleBackColor = true;
-
+			this.button01.Click += new System.EventHandler(this.button_Click);
 			// 
 			// button02
 			// 
@@ -118,6 +110,7 @@ namespace TicTacToeGame
 			this.button02.Size = new System.Drawing.Size(92, 54);
 			this.button02.TabIndex = 6;
 			this.button02.UseVisualStyleBackColor = true;
+			this.button02.Click += new System.EventHandler(this.button_Click);
 			// 
 			// button10
 			// 
@@ -126,6 +119,7 @@ namespace TicTacToeGame
 			this.button10.Size = new System.Drawing.Size(92, 54);
 			this.button10.TabIndex = 7;
 			this.button10.UseVisualStyleBackColor = true;
+			this.button10.Click += new System.EventHandler(this.button_Click);
 			// 
 			// button11
 			// 
@@ -134,6 +128,7 @@ namespace TicTacToeGame
 			this.button11.Size = new System.Drawing.Size(92, 54);
 			this.button11.TabIndex = 8;
 			this.button11.UseVisualStyleBackColor = true;
+			this.button11.Click += new System.EventHandler(this.button_Click);
 			// 
 			// button12
 			// 
@@ -142,6 +137,7 @@ namespace TicTacToeGame
 			this.button12.Size = new System.Drawing.Size(92, 54);
 			this.button12.TabIndex = 9;
 			this.button12.UseVisualStyleBackColor = true;
+			this.button12.Click += new System.EventHandler(this.button_Click);
 			// 
 			// button20
 			// 
@@ -150,6 +146,7 @@ namespace TicTacToeGame
 			this.button20.Size = new System.Drawing.Size(92, 54);
 			this.button20.TabIndex = 10;
 			this.button20.UseVisualStyleBackColor = true;
+			this.button20.Click += new System.EventHandler(this.button_Click);
 			// 
 			// button21
 			// 
@@ -158,6 +155,7 @@ namespace TicTacToeGame
 			this.button21.Size = new System.Drawing.Size(92, 54);
 			this.button21.TabIndex = 11;
 			this.button21.UseVisualStyleBackColor = true;
+			this.button21.Click += new System.EventHandler(this.button_Click);
 			// 
 			// button22
 			// 
@@ -166,6 +164,7 @@ namespace TicTacToeGame
 			this.button22.Size = new System.Drawing.Size(92, 54);
 			this.button22.TabIndex = 12;
 			this.button22.UseVisualStyleBackColor = true;
+			this.button22.Click += new System.EventHandler(this.button_Click);
 			// 
 			// turnLabel
 			// 
@@ -192,7 +191,7 @@ namespace TicTacToeGame
 			this.Controls.Add(this.button01);
 			this.Controls.Add(this.button00);
 			this.Controls.Add(this.resetButton);
-			this.Controls.Add(this.label3);
+			this.Controls.Add(this.gameResult);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Name = "Form1";
@@ -206,7 +205,7 @@ namespace TicTacToeGame
 
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Label gameResult;
 		private System.Windows.Forms.Button resetButton;
 		private System.Windows.Forms.Button button00;
 		private System.Windows.Forms.Button button01;

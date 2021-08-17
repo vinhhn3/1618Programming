@@ -24,43 +24,108 @@ namespace TicTacToeGame
 
 		private GameResult IsThereAWinner()
 		{
-			return GameResult.NoWinner;
+			bool isThereAWinner = false;
+
+			// Check Vertical
+			if (button00.Text != "" && (button00.Text == button01.Text) && (button00.Text == button02.Text))
+			{
+				isThereAWinner = true;
+			}
+			else if (button10.Text != "" && (button10.Text == button11.Text) && (button10.Text == button12.Text))
+			{
+				isThereAWinner = true;
+			}
+			else if (button20.Text != "" && (button20.Text == button21.Text) && (button20.Text == button22.Text))
+			{
+				isThereAWinner = true;
+			}
+			// Check Horizontal
+			else if (button00.Text != "" && (button00.Text == button10.Text) && (button00.Text == button20.Text))
+			{
+				isThereAWinner = true;
+			}
+			else if (button10.Text != "" && (button10.Text == button11.Text) && (button10.Text == button21.Text))
+			{
+				isThereAWinner = true;
+			}
+			else if (button20.Text != "" && (button20.Text == button21.Text) && (button20.Text == button22.Text))
+			{
+				isThereAWinner = true;
+			}
+			// Check diagonal
+			else if (button00.Text != "" && (button00.Text == button11.Text) && (button00.Text == button22.Text))
+			{
+				isThereAWinner = true;
+			}
+			else if (button02.Text != "" && (button02.Text == button11.Text) && (button02.Text == button20.Text))
+			{
+				isThereAWinner = true;
+			}
+
+			if (!isThereAWinner)
+			{
+				_result = GameResult.NoWinner;
+				return _result;
+			}
+
+			else
+			{
+				if (_turn == "Player 1")
+				{
+					_result = GameResult.Player1;
+					return _result;
+				}
+				else
+				{
+					_result = GameResult.Player2;
+					return _result;
+				}
+			}
 		}
 
 		private void button_Click(object sender, EventArgs e)
 		{
 			Button button = (Button)sender;
-			if (!string.IsNullOrEmpty(button.Text))
+			if (!string.IsNullOrEmpty(button.Text) && _result != GameResult.NoWinner)
 			{
 				return;
 			}
 			if (_turn.Equals("Player 1"))
 			{
 				button.Text = "X";
-				_turn = "Player 2";
-
-
 			}
 			else
 			{
 				button.Text = "O";
-				_turn = "Player 1";
 			}
 
 			switch (IsThereAWinner())
 			{
 				case GameResult.NoWinner:
+					if (_turn.Equals("Player 1"))
+					{
+						_turn = "Player 2";
+					}
+					else
+					{
+						_turn = "Player 1";
+					}
+					turnLabel.Text = "Turn: " + _turn;
 					break;
 				case GameResult.Player1:
+					gameResult.Text = "PLAYER 1 WIN !!!";
 					break;
 				case GameResult.Player2:
+					gameResult.Text = "PLAYER 2 WIN !!!";
+
 					break;
 				case GameResult.Draw:
+					gameResult.Text = "DRAW !!!";
+
 					break;
 				default:
 					break;
 			}
-			turnLabel.Text = "Turn: " + _turn;
 		}
 
 		private void resetButton_Click(object sender, EventArgs e)
@@ -77,6 +142,7 @@ namespace TicTacToeGame
 
 			_turn = "Player 1";
 			turnLabel.Text = "Turn: Player 1";
+			gameResult.Text = "";
 		}
 	}
 }
