@@ -3,6 +3,15 @@ using System.Windows.Forms;
 
 namespace TicTacToeGame
 {
+	enum GameResult
+	{
+		NoWinner,
+		Player1,
+		Player2,
+		Draw
+	}
+
+
 	public partial class Form1 : Form
 	{
 		public Form1()
@@ -11,48 +20,45 @@ namespace TicTacToeGame
 		}
 
 		private string _turn = "Player 1";
+		private GameResult _result = GameResult.NoWinner;
 
-		private void label2_Click(object sender, EventArgs e)
+		private GameResult IsThereAWinner()
 		{
-
+			return GameResult.NoWinner;
 		}
 
-		private void button00_Click(object sender, EventArgs e)
+		private void button_Click(object sender, EventArgs e)
 		{
-			if (!string.IsNullOrEmpty(button00.Text))
+			Button button = (Button)sender;
+			if (!string.IsNullOrEmpty(button.Text))
 			{
 				return;
 			}
 			if (_turn.Equals("Player 1"))
 			{
-				button00.Text = "X";
+				button.Text = "X";
 				_turn = "Player 2";
+
 
 			}
 			else
 			{
-				button00.Text = "O";
+				button.Text = "O";
 				_turn = "Player 1";
 			}
-			turnLabel.Text = "Turn: " + _turn;
-		}
 
-		private void button01_Click(object sender, EventArgs e)
-		{
-			if (!string.IsNullOrEmpty(button01.Text))
+			switch (IsThereAWinner())
 			{
-				return;
-			}
-			if (_turn.Equals("Player 1"))
-			{
-				button01.Text = "X";
-				_turn = "Player 2";
-
-			}
-			else
-			{
-				button01.Text = "O";
-				_turn = "Player 1";
+				case GameResult.NoWinner:
+					break;
+				case GameResult.Player1:
+					break;
+				case GameResult.Player2:
+					break;
+				case GameResult.Draw:
+					break;
+				default:
+					break;
 			}
 			turnLabel.Text = "Turn: " + _turn;
 		}
@@ -61,6 +67,14 @@ namespace TicTacToeGame
 		{
 			button00.Text = "";
 			button01.Text = "";
+			button02.Text = "";
+			button10.Text = "";
+			button11.Text = "";
+			button12.Text = "";
+			button20.Text = "";
+			button21.Text = "";
+			button22.Text = "";
+
 			_turn = "Player 1";
 			turnLabel.Text = "Turn: Player 1";
 		}
