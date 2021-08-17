@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCD0904Polymorphism", "GCD0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCD0904NamingConvention", "GCD0904NamingConvention\GCD0904NamingConvention.csproj", "{728CE1C3-C786-4D52-80E0-7408C9B0BFE4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCD0904EventDrivenProgramming", "GCD0904EventDrivenProgramming\GCD0904EventDrivenProgramming.csproj", "{FF078ACD-B649-4800-A790-F2A7129EDDE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{728CE1C3-C786-4D52-80E0-7408C9B0BFE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{728CE1C3-C786-4D52-80E0-7408C9B0BFE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{728CE1C3-C786-4D52-80E0-7408C9B0BFE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF078ACD-B649-4800-A790-F2A7129EDDE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF078ACD-B649-4800-A790-F2A7129EDDE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF078ACD-B649-4800-A790-F2A7129EDDE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF078ACD-B649-4800-A790-F2A7129EDDE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
