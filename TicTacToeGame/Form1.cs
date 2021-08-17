@@ -21,6 +21,7 @@ namespace TicTacToeGame
 
 		private string _turn = "Player 1";
 		private GameResult _result = GameResult.NoWinner;
+		private int _turnCounter = 0;
 
 		private GameResult IsThereAWinner()
 		{
@@ -62,13 +63,17 @@ namespace TicTacToeGame
 				isThereAWinner = true;
 			}
 
-			if (!isThereAWinner)
+			if (!isThereAWinner) // isThereAWinner = False => !isThereAWinner = True
 			{
+				if (_turnCounter == 9)
+				{
+					_result = GameResult.Draw;
+					return _result;
+				}
 				_result = GameResult.NoWinner;
 				return _result;
 			}
-
-			else
+			else                // isThereAWinner = True => !isThereAWinner = False
 			{
 				if (_turn == "Player 1")
 				{
@@ -83,10 +88,11 @@ namespace TicTacToeGame
 			}
 		}
 
+
 		private void button_Click(object sender, EventArgs e)
 		{
 			Button button = (Button)sender;
-			if (!string.IsNullOrEmpty(button.Text) && _result != GameResult.NoWinner)
+			if (!string.IsNullOrEmpty(button.Text) || _result != GameResult.NoWinner)
 			{
 				return;
 			}
@@ -98,6 +104,8 @@ namespace TicTacToeGame
 			{
 				button.Text = "O";
 			}
+
+			_turnCounter++;
 
 			switch (IsThereAWinner())
 			{
@@ -117,11 +125,9 @@ namespace TicTacToeGame
 					break;
 				case GameResult.Player2:
 					gameResult.Text = "PLAYER 2 WIN !!!";
-
 					break;
 				case GameResult.Draw:
 					gameResult.Text = "DRAW !!!";
-
 					break;
 				default:
 					break;
@@ -143,6 +149,7 @@ namespace TicTacToeGame
 			_turn = "Player 1";
 			turnLabel.Text = "Turn: Player 1";
 			gameResult.Text = "";
+			_result = GameResult.NoWinner;
 		}
 	}
 }
