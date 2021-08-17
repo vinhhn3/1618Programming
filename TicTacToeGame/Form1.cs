@@ -75,16 +75,8 @@ namespace TicTacToeGame
 			}
 			else                // isThereAWinner = True => !isThereAWinner = False
 			{
-				if (_turn == "Player 1")
-				{
-					_result = GameResult.Player1;
-					return _result;
-				}
-				else
-				{
-					_result = GameResult.Player2;
-					return _result;
-				}
+				_result = _turn == "Player 1" ? GameResult.Player1 : GameResult.Player2;
+				return _result;
 			}
 		}
 
@@ -96,28 +88,14 @@ namespace TicTacToeGame
 			{
 				return;
 			}
-			if (_turn.Equals("Player 1"))
-			{
-				button.Text = "X";
-			}
-			else
-			{
-				button.Text = "O";
-			}
+			button.Text = _turn.Equals("Player 1") ? "X" : "O";
 
 			_turnCounter++;
 
 			switch (IsThereAWinner())
 			{
 				case GameResult.NoWinner:
-					if (_turn.Equals("Player 1"))
-					{
-						_turn = "Player 2";
-					}
-					else
-					{
-						_turn = "Player 1";
-					}
+					_turn = _turn.Equals("Player 1") ? "Player 2" : "Player 1";
 					turnLabel.Text = "Turn: " + _turn;
 					break;
 				case GameResult.Player1:
