@@ -45,11 +45,11 @@ namespace TicTacToeGame
 			{
 				isThereAWinner = true;
 			}
-			else if (button10.Text != "" && (button10.Text == button11.Text) && (button10.Text == button21.Text))
+			else if (button01.Text != "" && (button01.Text == button11.Text) && (button01.Text == button21.Text))
 			{
 				isThereAWinner = true;
 			}
-			else if (button20.Text != "" && (button20.Text == button21.Text) && (button20.Text == button22.Text))
+			else if (button02.Text != "" && (button02.Text == button12.Text) && (button02.Text == button22.Text))
 			{
 				isThereAWinner = true;
 			}
