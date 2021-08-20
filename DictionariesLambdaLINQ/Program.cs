@@ -111,33 +111,33 @@ namespace DictionariesLambdaLINQ
       Console.WriteLine(dictCapitals.ContainsKey("France"));    // False
 
       // Problem: Word Synonyms
-      //Console.WriteLine("==========");
-      //SortedDictionary<string, List<string>> synonyms = new SortedDictionary<string, List<string>>();
-      //Console.Write("Read 2 * N lines of pairs word and synonym: ");
-      //int n = int.Parse(Console.ReadLine());
-      //for (int i = 0; i < n; i++)
-      //{
-      //  var word = Console.ReadLine();
-      //  var synonym = Console.ReadLine();
+      Console.WriteLine("==========");
+      SortedDictionary<string, List<string>> synonyms = new SortedDictionary<string, List<string>>();
+      Console.Write("Read 2 * N lines of pairs word and synonym: ");
+      int n = int.Parse(Console.ReadLine());
+      for (int i = 0; i < n; i++)
+      {
+        var word = Console.ReadLine();
+        var synonym = Console.ReadLine();
 
-      //  if (synonyms.ContainsKey(word))
-      //  {
-      //    synonyms[word].Add(synonym);
-      //  }
-      //  else
-      //  {
-      //    synonyms.Add(word, new List<string>() { synonym });
-      //  }
-      //}
+        if (synonyms.ContainsKey(word))
+        {
+          synonyms[word].Add(synonym);
+        }
+        else
+        {
+          synonyms.Add(word, new List<string>() { synonym });
+        }
+      }
 
-      //foreach (var item in synonyms)
-      //{
-      //  Console.WriteLine($"{item.Key} -> ");
-      //  foreach (var syn in item.Value)
-      //  {
-      //    Console.WriteLine($"\t {syn}");
-      //  }
-      //}
+      foreach (var item in synonyms)
+      {
+        Console.WriteLine($"{item.Key} -> ");
+        foreach (var syn in item.Value)
+        {
+          Console.WriteLine($"\t {syn}");
+        }
+      }
 
       // LINQ
       Console.WriteLine("==========");
