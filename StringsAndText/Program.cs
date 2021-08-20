@@ -3,7 +3,22 @@
 namespace StringsAndText
 {
   class Program
+
+
   {
+    // Examples for StackOverFlow
+    static void functionA()
+    {
+      int c = 10;
+      functionB();
+    }
+
+    static void functionB()
+    {
+      functionA();
+    }
+
+
     static void Main(string[] args)
     {
       // Declare string 
@@ -36,6 +51,8 @@ namespace StringsAndText
       c[0] = 'O';
       // Cannot change value of hello[0] because string is immutable object
       // hello[0] = 'O';
+
+      // functionA();
       Console.ReadLine();
 
     }
