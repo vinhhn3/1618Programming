@@ -3,12 +3,20 @@ using System.Windows.Forms;
 
 namespace TicTacToeGame
 {
-	enum GameResult
+	enum GameResult // Union
 	{
 		NoWinner,
 		Player1,
 		Player2,
 		Draw
+	}
+
+	enum MovieType
+	{
+		Action,
+		Drama,
+		Comedy,
+		SuperHero
 	}
 
 
