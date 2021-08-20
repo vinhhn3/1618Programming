@@ -59,7 +59,9 @@ namespace StringsAndText
       Console.WriteLine(result); // Hello John Wick
       result = string.Concat(
         gretting, " ", name, ". This is example of Concat() function");
-      Console.WriteLine(result);  // Hello John Wick. This is example of Concat() function
+      Console.WriteLine(result);
+      // Output:
+      // Hello John Wick. This is example of Concat() function
 
       // Searching 
       // Contains()
@@ -90,6 +92,45 @@ namespace StringsAndText
       Console.WriteLine(power); //0C
       power = card.Substring(0);
       Console.WriteLine(power); //10C
+
+      // Splitting
+      string text = "Hello, vinh@gmail.com, you are using email vinh@gmail.com";
+      // Single seperator
+      string[] words = text.Split('@');
+      foreach (var item in words)
+      {
+        Console.WriteLine(item);
+        // Output:
+        // Hello, vinh
+        // gmail.com, you are using email vinh
+        // gmail.com
+      }
+
+      // Multiple seperators
+      char[] seperators = new char[]
+      {
+        ',', '@','.'
+      };
+      words = text.Split(seperators);
+      foreach (var item in words)
+      {
+        Console.WriteLine(item);
+        // Output:
+        // Hello
+        //  vinh
+        // gmail
+        // com
+        //  you are using email vinh
+        // gmail
+        // com
+      }
+
+      // Replacing oldString by newString
+      text = "Hello, vinh@gmail.com, you are using email vinh@gmail.com";
+      string replacedText = text.Replace("gmail.com", "fe.edu.vn");
+      Console.WriteLine(replacedText);
+      // Output:
+      // "Hello, vinh@fe.edu.vn, you are using email vinh@fe.edu.vn";
 
       // functionA();
       Console.ReadLine();
