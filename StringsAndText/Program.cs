@@ -52,6 +52,45 @@ namespace StringsAndText
       // Cannot change value of hello[0] because string is immutable object
       // hello[0] = 'O';
 
+      // Concat()
+      string gretting = "Hello ";
+      string name = "John Wick";
+      string result = gretting + " " + name;
+      Console.WriteLine(result); // Hello John Wick
+      result = string.Concat(
+        gretting, " ", name, ". This is example of Concat() function");
+      Console.WriteLine(result);  // Hello John Wick. This is example of Concat() function
+
+      // Searching 
+      // Contains()
+      var contains = name.Contains("Wi"); // true
+      Console.WriteLine(contains);
+      contains = name.Contains("Doe");    // false
+      Console.WriteLine(contains);
+
+      // IndexOf() - returns the first match index or -1
+      string fruits = "banana, apple, kiwi, banana, apple";
+      Console.WriteLine(fruits.IndexOf("banana")); //0
+      Console.WriteLine(fruits.IndexOf("apple"));  //8
+      Console.WriteLine(fruits.IndexOf("orange")); //-1
+
+      // LastIndexOf() - finds the last occurrence or -1
+      Console.WriteLine(fruits.LastIndexOf("banana"));    //21
+      Console.WriteLine(fruits.LastIndexOf("orange"));    //-1
+
+      // Substring(int startIndex, int length)
+      string card = "10C";
+      string power = card.Substring(0, 2);
+      Console.WriteLine(power); //10
+      power = card.Substring(1, 2);
+      Console.WriteLine(power); //0C
+
+      // Substring(int startIndex)
+      power = card.Substring(1);
+      Console.WriteLine(power); //0C
+      power = card.Substring(0);
+      Console.WriteLine(power); //10C
+
       // functionA();
       Console.ReadLine();
 
