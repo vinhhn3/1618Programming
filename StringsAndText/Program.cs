@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Text;
 
 namespace StringsAndText
 {
@@ -133,6 +135,39 @@ namespace StringsAndText
       // "Hello, vinh@fe.edu.vn, you are using email vinh@fe.edu.vn";
 
       // functionA();
+
+      // StringBuilder
+      hello = "Hello";
+      hello = hello + " World";
+      hello = hello + " John Wick";
+
+      StringBuilder sb = new StringBuilder();
+      sb.Append("Hello, ");
+      sb.Append("John! ");
+      sb.Append("I sent you an email.");
+      Console.WriteLine(sb);
+      //Hello, John! I sent you an email.
+
+      // Performance Demonstration
+      // string vs. StringBuilder
+      // Concat() vs. Append()
+      Stopwatch sw = new Stopwatch();
+      sw.Start();
+      text = "";
+      for (int i = 0; i < 50000; i++)
+        text += i;
+      sw.Stop();
+      Console.WriteLine(sw.ElapsedMilliseconds); // 5344 ms
+
+      // Using StringBuilder
+      sw = new Stopwatch();
+      sw.Start();
+      StringBuilder textStringBuilder = new StringBuilder();
+      for (int i = 0; i < 50000; i++)
+        textStringBuilder.Append(i);
+      sw.Stop();
+      Console.WriteLine(sw.ElapsedMilliseconds); // 9ms
+
       Console.ReadLine();
 
     }
